@@ -1,0 +1,18 @@
+# Generated and local state
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+dist/
+build/
+coverage/
+*.log
+.DS_Store
+.env
+.env.*
+
+# Manuscript and private workflow material intentionally live outside this repository
+submission/
+private/
+working/
