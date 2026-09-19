@@ -1,0 +1,15 @@
+{
+  "description": "Publication-safe companion code, protocols and analysis-ready data for state-transfer interventions in adaptive decision-tree populations under concept drift.",
+  "engines": {
+    "node": "22.16.0"
+  },
+  "license": "SEE LICENSE-POLICY.md",
+  "name": "decision-tree-state-transfer",
+  "private": false,
+  "scripts": {
+    "reproduce:study2": "python3 -B validation/reproduce_study2_public.py",
+    "verify": "python3 -B validation/validate_public_candidate.py"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}

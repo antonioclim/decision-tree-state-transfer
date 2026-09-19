@@ -1,0 +1,4 @@
+# F06 direct comparator dependencies only. This is not a full transitive lock.
+# F07 must freeze a platform-specific, hash-verified environment before F09 CONF lock.
+river==0.26.1
+scikit-learn==1.9.0

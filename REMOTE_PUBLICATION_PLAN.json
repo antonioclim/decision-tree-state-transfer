@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "AUTHORISED_PENDING_PLATFORM_EXECUTION",
+  "writes_authorised": true,
+  "authorisation_date": "2026-09-19",
+  "recommended_new_public_repository": "antonioclim/decision-tree-state-transfer",
+  "branch": "main",
+  "release_tag": "v1.0.0",
+  "visibility": "public",
+  "zenodo_route": "manual deposit of the exact extended archival candidate after the GitHub release exists",
+  "existing_private_repository": "antonioclim/decision-tree-drift-research",
+  "existing_repository_visibility": "private",
+  "existing_repository_must_remain_unchanged": true
+}

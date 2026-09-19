@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "AUTHORISED_FOR_PUBLIC_RELEASE",
+  "authorised_for_public_release": true,
+  "authorisation_date": "2026-09-19",
+  "authorised_creator_order": [
+    {
+      "name": "Andrei Toma",
+      "position": 1,
+      "affiliation": "Bucharest University of Economic Studies",
+      "email": "andrei.toma@ie.ase.ro",
+      "orcid": null
+    },
+    {
+      "name": "Antonio Clim",
+      "position": 2,
+      "affiliation": "Bucharest University of Economic Studies",
+      "email": "antonio.clim@csie.ase.ro",
+      "orcid": "0000-0003-4745-0431"
+    }
+  ],
+  "rights_confirmation": true,
+  "rights_bound_i15a_manifest_sha256": "bb867a2ebfd127b071247b5a7f3b2b95bd6ece631ffba064ded621e785821792",
+  "rights_bound_zenodo_archive_sha256": "00e19ec9d733bf8751e36bd397c2943f73cde9f9fe2f5346658eb77599a87d24",
+  "licence_route": {
+    "software": "PolyForm-Noncommercial-1.0.0",
+    "protocols_documentation_evidence": "CC-BY-NC-4.0"
+  },
+  "repository": "antonioclim/decision-tree-state-transfer",
+  "visibility": "public",
+  "default_branch": "main",
+  "release_tag": "v1.0.0",
+  "zenodo_decision": "APPROVED_MANUAL_EXTENDED_ARCHIVE_DEPOSIT",
+  "historical_private_repository_must_remain_unchanged": true
+}

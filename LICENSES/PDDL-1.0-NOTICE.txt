@@ -1,0 +1,7 @@
+Open Data Commons Public Domain Dedication and License 1.0
+SPDX-License-Identifier: PDDL-1.0
+
+Authoritative legal text: <https://opendatacommons.org/licenses/pddl/1-0/>
+SPDX record: <https://spdx.org/licenses/PDDL-1.0.html>
+
+This notice records the upstream licence declared for ELEC2. It does not replace or amend the authoritative legal text.
