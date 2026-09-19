@@ -1,0 +1,85 @@
+{
+  "equivalence_aware_resource_dominance": [
+    {
+      "axes": [
+        "total_apw",
+        "process_cpu_seconds",
+        "elapsed_seconds",
+        "prediction_ns_per_prediction",
+        "state_snapshot_mib",
+        "provenance_mib"
+      ],
+      "dominant": "PERSIST",
+      "dominated": "CHAMPION-RESEED"
+    }
+  ],
+  "interpretation": "A dominance claim is valid only for the axes explicitly listed. Six-axis simultaneous dominance is not established when prediction-time uncertainty is unresolved.",
+  "loss_equivalence_anchor": "PASS_ALL_THREE_PAIRWISE_LOSS_CONTRASTS_WITHIN_PRACTICAL_EQUIVALENCE_MARGIN",
+  "loss_orientation": "lower",
+  "pointwise_resource_only_dominance": [
+    {
+      "axes": [
+        "total_apw",
+        "process_cpu_seconds",
+        "elapsed_seconds",
+        "prediction_ns_per_prediction",
+        "state_snapshot_mib",
+        "provenance_mib"
+      ],
+      "dominant": "PERSIST",
+      "dominated": "CHAMPION-RESEED"
+    }
+  ],
+  "resource_orientation": "lower",
+  "rss_excluded": true,
+  "rss_reason": "Reported RSS is a shared-process lifetime high-water report and causal arm-specific comparison is not permitted.",
+  "strict_full_vector_loss_plus_resources_nondominated_arms": [
+    "CHAMPION-RESEED",
+    "POPULATION-RESEED",
+    "PERSIST"
+  ],
+  "uncertainty_aware_relations": [
+    {
+      "five_non_latency_axis_dominance": null,
+      "left": "CHAMPION-RESEED",
+      "right": "POPULATION-RESEED",
+      "simultaneous_axis_directions": {
+        "elapsed_seconds": "RIGHT_LOWER",
+        "prediction_ns_per_prediction": "RIGHT_LOWER",
+        "process_cpu_seconds": "RIGHT_LOWER",
+        "provenance_mib": "UNRESOLVED",
+        "state_snapshot_mib": "LEFT_LOWER",
+        "total_apw": "LEFT_LOWER"
+      },
+      "six_axis_dominance": null
+    },
+    {
+      "five_non_latency_axis_dominance": "PERSIST",
+      "left": "POPULATION-RESEED",
+      "right": "PERSIST",
+      "simultaneous_axis_directions": {
+        "elapsed_seconds": "RIGHT_LOWER",
+        "prediction_ns_per_prediction": "UNRESOLVED",
+        "process_cpu_seconds": "RIGHT_LOWER",
+        "provenance_mib": "RIGHT_LOWER",
+        "state_snapshot_mib": "RIGHT_LOWER",
+        "total_apw": "RIGHT_LOWER"
+      },
+      "six_axis_dominance": null
+    },
+    {
+      "five_non_latency_axis_dominance": "PERSIST",
+      "left": "CHAMPION-RESEED",
+      "right": "PERSIST",
+      "simultaneous_axis_directions": {
+        "elapsed_seconds": "RIGHT_LOWER",
+        "prediction_ns_per_prediction": "UNRESOLVED",
+        "process_cpu_seconds": "RIGHT_LOWER",
+        "provenance_mib": "RIGHT_LOWER",
+        "state_snapshot_mib": "RIGHT_LOWER",
+        "total_apw": "RIGHT_LOWER"
+      },
+      "six_axis_dominance": null
+    }
+  ]
+}

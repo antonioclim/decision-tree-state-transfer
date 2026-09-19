@@ -1,0 +1,39 @@
+{
+  "external_budget_claim": false,
+  "note": "Pooled quantile profiles are transparent sensitivity thresholds, not claimed deployment budgets or monetary costs.",
+  "status": "DESCRIPTIVE_DATA_DERIVED_HARD_BUDGET_SENSITIVITY",
+  "thresholds": {
+    "POOLED_Q50": {
+      "elapsed_seconds": 10.918351270999999,
+      "prediction_ns_per_prediction": 622.7560000000001,
+      "process_cpu_seconds": 11.547203,
+      "provenance_mib": 257.7512638568878,
+      "state_snapshot_mib": 2.9940409660339355,
+      "total_apw": 65312540.5
+    },
+    "POOLED_Q75": {
+      "elapsed_seconds": 13.340589941874999,
+      "prediction_ns_per_prediction": 661.4499999999999,
+      "process_cpu_seconds": 14.2442515,
+      "provenance_mib": 332.0378613471985,
+      "state_snapshot_mib": 3.9439382553100586,
+      "total_apw": 65314428.25
+    },
+    "POOLED_Q90": {
+      "elapsed_seconds": 14.4468065554,
+      "prediction_ns_per_prediction": 707.6015249999999,
+      "process_cpu_seconds": 15.5368125,
+      "provenance_mib": 377.17344412803646,
+      "state_snapshot_mib": 4.567833757400512,
+      "total_apw": 65317199.0
+    },
+    "POOLED_Q95": {
+      "elapsed_seconds": 15.06515024665,
+      "prediction_ns_per_prediction": 801.5061249999978,
+      "process_cpu_seconds": 16.245385699999996,
+      "provenance_mib": 403.21738004684437,
+      "state_snapshot_mib": 4.894113683700561,
+      "total_apw": 65317690.15
+    }
+  }
+}

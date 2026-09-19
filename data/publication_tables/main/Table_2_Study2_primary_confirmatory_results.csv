@@ -1,0 +1,3 @@
+display_estimand,estimand,definition,estimate,se,simultaneous_ci_lower,simultaneous_ci_upper,p_unadjusted,p_holm_adjusted,practical_classification,holm_reject_fwer_0_05
+J₁,J1,L(CHAMPION-RESEED) - L(POPULATION-RESEED),-0.0003555803571428,0.0002804559852191,-0.0009869213581424,0.0002757606438567,0.2025,0.405,EQUIVALENT,False
+J₂,J2,L(POPULATION-RESEED) - L(PERSIST),-0.0002272321428571,0.0002712860183277,-0.000835674617818,0.0003812103321037,0.4067,0.4067,EQUIVALENT,False

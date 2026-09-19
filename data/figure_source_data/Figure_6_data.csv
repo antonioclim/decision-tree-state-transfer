@@ -1,0 +1,19 @@
+panel,metric,label,unit,arm,equal_scenario_mean_native,plotted_value,plot_scale_divisor
+A,total_apw,Total deterministic work,million APW,CHAMPION-RESEED,65312542.93928571,65.3125429392857,1000000.0
+A,total_apw,Total deterministic work,million APW,POPULATION-RESEED,65315909.743303575,65.31590974330358,1000000.0
+A,total_apw,Total deterministic work,million APW,PERSIST,65312519.990625,65.312519990625,1000000.0
+B,process_cpu_seconds,Process CPU time,seconds,CHAMPION-RESEED,12.432636079910711,12.432636079910711,1.0
+B,process_cpu_seconds,Process CPU time,seconds,POPULATION-RESEED,12.343092984375003,12.343092984375003,1.0
+B,process_cpu_seconds,Process CPU time,seconds,PERSIST,12.116824470089284,12.116824470089284,1.0
+C,elapsed_seconds,Elapsed time,seconds,CHAMPION-RESEED,11.686357510505356,11.686357510505356,1.0
+C,elapsed_seconds,Elapsed time,seconds,POPULATION-RESEED,11.59492057077902,11.59492057077902,1.0
+C,elapsed_seconds,Elapsed time,seconds,PERSIST,11.329562647962948,11.329562647962948,1.0
+D,prediction_ns_per_prediction,Mean prediction time,ns per prediction,CHAMPION-RESEED,749.7653330357142,749.7653330357142,1.0
+D,prediction_ns_per_prediction,Mean prediction time,ns per prediction,POPULATION-RESEED,681.9508647321428,681.9508647321428,1.0
+D,prediction_ns_per_prediction,Mean prediction time,ns per prediction,PERSIST,722.3071763392858,722.3071763392858,1.0
+E,state_snapshot_mib,End-state snapshot size,MiB,CHAMPION-RESEED,3.091088109782764,3.091088109782764,1.0
+E,state_snapshot_mib,End-state snapshot size,MiB,POPULATION-RESEED,3.21216648391315,3.21216648391315,1.0
+E,state_snapshot_mib,End-state snapshot size,MiB,PERSIST,2.7915870317390987,2.7915870317390987,1.0
+F,provenance_mib,Provenance event bytes,MiB,CHAMPION-RESEED,287.5819321398224,287.5819321398224,1.0
+F,provenance_mib,Provenance event bytes,MiB,POPULATION-RESEED,285.4279248016221,285.4279248016221,1.0
+F,provenance_mib,Provenance event bytes,MiB,PERSIST,239.3871662024941,239.3871662024941,1.0

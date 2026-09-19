@@ -1,0 +1,272 @@
+{
+  "bootstrap": {
+    "B": 9999,
+    "confirmatory_family_modified": false,
+    "critical_abs_t": 2.808218579323239,
+    "family_size": 18,
+    "method": "paired equal-scenario within-scenario whole-stream bootstrap-t with max-|t| simultaneous intervals",
+    "p_values_computed": false,
+    "seed_uint64": 8083117587755875308
+  },
+  "coverage": {
+    "arms": [
+      "CHAMPION-RESEED",
+      "POPULATION-RESEED",
+      "PERSIST"
+    ],
+    "checkpoints_averaged_within_stream": 2,
+    "independent_streams": 1120,
+    "scenario_count": 14,
+    "streams_per_scenario": 80
+  },
+  "firewalls": {
+    "cloud_accessed": false,
+    "github_written": false,
+    "learner_reexecuted": false,
+    "money_conversion": false,
+    "network_accessed": false,
+    "new_confirmatory_p_values": false,
+    "rss_causal_pairwise_comparison": false,
+    "zenodo_written": false
+  },
+  "generated_at_utc": "2026-09-19T05:11:01.550625+00:00",
+  "hard_budget": {
+    "external_budget_claim": false,
+    "note": "Pooled quantile profiles are transparent sensitivity thresholds, not claimed deployment budgets or monetary costs.",
+    "status": "DESCRIPTIVE_DATA_DERIVED_HARD_BUDGET_SENSITIVITY",
+    "thresholds": {
+      "POOLED_Q50": {
+        "elapsed_seconds": 10.918351270999999,
+        "prediction_ns_per_prediction": 622.7560000000001,
+        "process_cpu_seconds": 11.547203,
+        "provenance_mib": 257.7512638568878,
+        "state_snapshot_mib": 2.9940409660339355,
+        "total_apw": 65312540.5
+      },
+      "POOLED_Q75": {
+        "elapsed_seconds": 13.340589941874999,
+        "prediction_ns_per_prediction": 661.4499999999999,
+        "process_cpu_seconds": 14.2442515,
+        "provenance_mib": 332.0378613471985,
+        "state_snapshot_mib": 3.9439382553100586,
+        "total_apw": 65314428.25
+      },
+      "POOLED_Q90": {
+        "elapsed_seconds": 14.4468065554,
+        "prediction_ns_per_prediction": 707.6015249999999,
+        "process_cpu_seconds": 15.5368125,
+        "provenance_mib": 377.17344412803646,
+        "state_snapshot_mib": 4.567833757400512,
+        "total_apw": 65317199.0
+      },
+      "POOLED_Q95": {
+        "elapsed_seconds": 15.06515024665,
+        "prediction_ns_per_prediction": 801.5061249999978,
+        "process_cpu_seconds": 16.245385699999996,
+        "provenance_mib": 403.21738004684437,
+        "state_snapshot_mib": 4.894113683700561,
+        "total_apw": 65317690.15
+      }
+    }
+  },
+  "host_epoch_notice": {
+    "R4_indices": [
+      0,
+      167
+    ],
+    "R4_maintenance_overlap_mtime_index": 167,
+    "R5_deadline_interrupted_unadmitted_identity": 1019,
+    "R5_indices": [
+      168,
+      1018
+    ],
+    "R6_indices": [
+      1019,
+      1119
+    ],
+    "all_1120_units_required_and_retained": true,
+    "do_not_claim_all_resource_samples_came_from_one_uninterrupted_host_epoch": true,
+    "do_not_drop_or_replace_historical_units": true,
+    "scientific_phase_complete": false
+  },
+  "input": {
+    "analysis_preoutcome_binding_sha256": "ca3ad48f8d171fa8810440b6eaf82eb9dc80e3b89fb5aff7ad565a463730d57d",
+    "evidence_root_sha256": "3f62e9316a394e433114eee6f18453dce565acf2efdc361e56680ac7d9b2e212",
+    "i06_closeout": {
+      "sha256": "9a81a77127476719f431830b03d425e6546751eb08b5ffe926006bc980ec1800",
+      "status": "PASS_I06B_FINAL_ADVERSARIAL_SCIENTIFIC_AUDIT_AND_EXPLICIT_PHASE_CLOSEOUT"
+    },
+    "protocol_sha256": "d8eaac46d96f0ffc986e3ac5937112910cb28010e6d2cdc42ab08255aa17a622",
+    "return_archive": {
+      "bytes": 143160111,
+      "sha256": "fdfbcb09298419209e4b0a26ca561a1dd76df3fa390acdf0066499614cce6330"
+    },
+    "schedule_sha256": "9990ceb030a2e85690d5d6595f1f872965c20abfbeb4970f03fc706efc3b2652",
+    "source_analysis_files": {
+      "runtime/RESOURCE_SEGMENT_NOTICE.json": "01ccdbffdb274092b984fab62c23280735375790b3b4936885a748776a83e09c",
+      "runtime/workspace/analysis/PRIMARY_INFERENCE.json": "ac9d5162be27fe877c5c98101d14a3c5cbd32439a0c3bb1c0c2d354042c868c0",
+      "runtime/workspace/analysis/RESOURCE_SUMMARIES.json": "e872d172e177a4861f0a8581a48a7528e4682d6edcab1f5da842fc676ad2f677"
+    },
+    "source_tree": "686856fd45e19795cbe21e980566965247d3b1c3"
+  },
+  "next_phase": "I08_EVIDENCE_CLAIM_GRAPH",
+  "pareto": {
+    "equivalence_aware_resource_dominance": [
+      {
+        "axes": [
+          "total_apw",
+          "process_cpu_seconds",
+          "elapsed_seconds",
+          "prediction_ns_per_prediction",
+          "state_snapshot_mib",
+          "provenance_mib"
+        ],
+        "dominant": "PERSIST",
+        "dominated": "CHAMPION-RESEED"
+      }
+    ],
+    "interpretation": "A dominance claim is valid only for the axes explicitly listed. Six-axis simultaneous dominance is not established when prediction-time uncertainty is unresolved.",
+    "loss_equivalence_anchor": "PASS_ALL_THREE_PAIRWISE_LOSS_CONTRASTS_WITHIN_PRACTICAL_EQUIVALENCE_MARGIN",
+    "loss_orientation": "lower",
+    "pointwise_resource_only_dominance": [
+      {
+        "axes": [
+          "total_apw",
+          "process_cpu_seconds",
+          "elapsed_seconds",
+          "prediction_ns_per_prediction",
+          "state_snapshot_mib",
+          "provenance_mib"
+        ],
+        "dominant": "PERSIST",
+        "dominated": "CHAMPION-RESEED"
+      }
+    ],
+    "resource_orientation": "lower",
+    "rss_excluded": true,
+    "rss_reason": "Reported RSS is a shared-process lifetime high-water report and causal arm-specific comparison is not permitted.",
+    "strict_full_vector_loss_plus_resources_nondominated_arms": [
+      "CHAMPION-RESEED",
+      "POPULATION-RESEED",
+      "PERSIST"
+    ],
+    "uncertainty_aware_relations": [
+      {
+        "five_non_latency_axis_dominance": null,
+        "left": "CHAMPION-RESEED",
+        "right": "POPULATION-RESEED",
+        "simultaneous_axis_directions": {
+          "elapsed_seconds": "RIGHT_LOWER",
+          "prediction_ns_per_prediction": "RIGHT_LOWER",
+          "process_cpu_seconds": "RIGHT_LOWER",
+          "provenance_mib": "UNRESOLVED",
+          "state_snapshot_mib": "LEFT_LOWER",
+          "total_apw": "LEFT_LOWER"
+        },
+        "six_axis_dominance": null
+      },
+      {
+        "five_non_latency_axis_dominance": "PERSIST",
+        "left": "POPULATION-RESEED",
+        "right": "PERSIST",
+        "simultaneous_axis_directions": {
+          "elapsed_seconds": "RIGHT_LOWER",
+          "prediction_ns_per_prediction": "UNRESOLVED",
+          "process_cpu_seconds": "RIGHT_LOWER",
+          "provenance_mib": "RIGHT_LOWER",
+          "state_snapshot_mib": "RIGHT_LOWER",
+          "total_apw": "RIGHT_LOWER"
+        },
+        "six_axis_dominance": null
+      },
+      {
+        "five_non_latency_axis_dominance": "PERSIST",
+        "left": "CHAMPION-RESEED",
+        "right": "PERSIST",
+        "simultaneous_axis_directions": {
+          "elapsed_seconds": "RIGHT_LOWER",
+          "prediction_ns_per_prediction": "UNRESOLVED",
+          "process_cpu_seconds": "RIGHT_LOWER",
+          "provenance_mib": "RIGHT_LOWER",
+          "state_snapshot_mib": "RIGHT_LOWER",
+          "total_apw": "RIGHT_LOWER"
+        },
+        "six_axis_dominance": null
+      }
+    ]
+  },
+  "primary_anchor": {
+    "J1_CHAMPION_minus_POPULATION": {
+      "B": 9999,
+      "ci": [
+        -0.0009869213581424428,
+        0.00027576064385672857
+      ],
+      "critical_abs_t": 2.251123293041059,
+      "critical_rank_one_based": 9750,
+      "degenerate_resamples": 0,
+      "estimate": -0.00035558035714285715,
+      "exceedances": 2024,
+      "holm_reject_fwer_0_05": false,
+      "observed_variance_zero": false,
+      "p_holm_adjusted": 0.405,
+      "p_unadjusted": 0.2025,
+      "practical_classification": "EQUIVALENT",
+      "se": 0.0002804559852191403,
+      "seed_uint64_decimal": "9076132160061475760",
+      "t_observed_abs": 1.2678651049825762
+    },
+    "J2_POPULATION_minus_PERSIST": {
+      "B": 9999,
+      "ci": [
+        -0.0008356746178180451,
+        0.0003812103321037594
+      ],
+      "critical_abs_t": 2.2428080839231126,
+      "critical_rank_one_based": 9750,
+      "degenerate_resamples": 0,
+      "estimate": -0.00022723214285714285,
+      "exceedances": 4066,
+      "holm_reject_fwer_0_05": false,
+      "observed_variance_zero": false,
+      "p_holm_adjusted": 0.4067,
+      "p_unadjusted": 0.4067,
+      "practical_classification": "EQUIVALENT",
+      "se": 0.00027128601832779943,
+      "seed_uint64_decimal": "14866205699164558107",
+      "t_observed_abs": 0.8376109622522988
+    },
+    "J_SUM_CHAMPION_minus_PERSIST": {
+      "classification": "EQUIVALENT_DERIVED_NO_NEW_P_VALUE",
+      "conservative_interval_from_simultaneous_J1_plus_J2": [
+        -0.001822595975960488,
+        0.000656970975960488
+      ],
+      "estimate": -0.0005828125,
+      "note": "Minkowski sum of the already simultaneous J1 and J2 intervals; not a third Holm-family test."
+    },
+    "arm_equal_scenario_mean_loss": {
+      "CHAMPION-RESEED": 0.23093928571428574,
+      "PERSIST": 0.23152209821428574,
+      "POPULATION-RESEED": 0.2312948660714286
+    },
+    "cancellation_diagnostic": "COMPONENTWISE_EQUIVALENCE",
+    "delta": 0.005,
+    "status": "PASS_ALL_THREE_PAIRWISE_LOSS_CONTRASTS_WITHIN_PRACTICAL_EQUIVALENCE_MARGIN"
+  },
+  "resource_reproduction": {
+    "comparisons": 43,
+    "max_abs_difference": 0.0,
+    "status": "PASS_OFFICIAL_RESOURCE_SUMMARY_REPRODUCTION"
+  },
+  "runtime": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "schema_version": 1,
+  "scientific_phase_complete": true,
+  "status": "PASS_I07_LOCAL_DECISION_ECONOMICS_COMPLETE_NO_REMOTE_WRITES",
+  "version": "DT-I07-DECISION-ECONOMICS-v1.0"
+}

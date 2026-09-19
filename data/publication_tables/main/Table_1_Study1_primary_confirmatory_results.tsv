@@ -1,0 +1,4 @@
+hypothesis	contrast	estimate_abs_loss	estimate_percentage_points	simultaneous_ci_lo_pp	simultaneous_ci_hi_pp	raw_p	holm_p	holm_reject	practical_classification
+H1	RESTART-CART − PERSIST	0.006003348	0.6003	0.5536	0.6471	0.0001	0.0003	true	BENEFICIAL
+H2	CHAMPION-RESEED − PERSIST	-0.000164788	-0.0165	-0.0508	0.0179	0.2504	0.2504	false	EQUIVALENT
+H3	MATERIAL-REPLACE − STRUCTURAL-SHAM | eligible	0.018945347	1.8945	1.8120	1.9771	0.0001	0.0003	true	BENEFICIAL

@@ -1,0 +1,55 @@
+{
+  "method": "paired equal-scenario whole-stream symmetric absolute bootstrap-t",
+  "independent_units": 1120,
+  "checkpoints_are_independent": false,
+  "family": [
+    "J1",
+    "J2"
+  ],
+  "primary": {
+    "J1": {
+      "estimate": -0.00035558035714285715,
+      "se": 0.0002804559852191403,
+      "t_observed_abs": 1.2678651049825762,
+      "critical_abs_t": 2.251123293041059,
+      "critical_rank_one_based": 9750,
+      "ci": [
+        -0.0009869213581424428,
+        0.00027576064385672857
+      ],
+      "p_unadjusted": 0.2025,
+      "exceedances": 2024,
+      "degenerate_resamples": 0,
+      "observed_variance_zero": false,
+      "practical_classification": "EQUIVALENT",
+      "seed_uint64_decimal": "9076132160061475760",
+      "B": 9999,
+      "p_holm_adjusted": 0.405,
+      "holm_reject_fwer_0_05": false
+    },
+    "J2": {
+      "estimate": -0.00022723214285714285,
+      "se": 0.00027128601832779943,
+      "t_observed_abs": 0.8376109622522988,
+      "critical_abs_t": 2.2428080839231126,
+      "critical_rank_one_based": 9750,
+      "ci": [
+        -0.0008356746178180451,
+        0.0003812103321037594
+      ],
+      "p_unadjusted": 0.4067,
+      "exceedances": 4066,
+      "degenerate_resamples": 0,
+      "observed_variance_zero": false,
+      "practical_classification": "EQUIVALENT",
+      "seed_uint64_decimal": "14866205699164558107",
+      "B": 9999,
+      "p_holm_adjusted": 0.4067,
+      "holm_reject_fwer_0_05": false
+    }
+  },
+  "j_sum_direct_point_estimate": -0.0005828125,
+  "j_sum_integer_closure": true,
+  "cancellation_diagnostic": "COMPONENTWISE_EQUIVALENCE",
+  "scientific_phase_complete": false
+}

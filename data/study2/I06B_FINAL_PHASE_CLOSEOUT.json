@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "project": "decision-tree-drift-research",
+  "phase": "I06B_STUDY2_CONFIRMATORY_EXTENSION",
+  "status": "PASS_I06B_FINAL_ADVERSARIAL_SCIENTIFIC_AUDIT_AND_EXPLICIT_PHASE_CLOSEOUT",
+  "closed_at_utc": "2026-09-19T04:48:00.517159+00:00",
+  "scientific_phase_complete": true,
+  "source_primary_artifact_scientific_phase_complete": false,
+  "source_return_archive": {
+    "sha256": "fdfbcb09298419209e4b0a26ca561a1dd76df3fa390acdf0066499614cce6330",
+    "bytes": 143160111
+  },
+  "raw_evidence": {
+    "independent_units": 1120,
+    "scenario_count": 14,
+    "units_per_scenario": 80,
+    "evidence_root_sha256": "3f62e9316a394e433114eee6f18453dce565acf2efdc361e56680ac7d9b2e212",
+    "active_quarantines": 0
+  },
+  "resource_summary_audit": {
+    "status": "PASS_INDEPENDENT_RESOURCE_SUMMARY_RECOMPUTATION_WITH_SCOPING_GUARDRAILS",
+    "I07_decision_economics_performed": false
+  },
+  "bindings": {
+    "source_tree": "686856fd45e19795cbe21e980566965247d3b1c3",
+    "protocol_sha256": "d8eaac46d96f0ffc986e3ac5937112910cb28010e6d2cdc42ab08255aa17a622",
+    "schedule_sha256": "9990ceb030a2e85690d5d6595f1f872965c20abfbeb4970f03fc706efc3b2652",
+    "analysis_preoutcome_binding_sha256": "ca3ad48f8d171fa8810440b6eaf82eb9dc80e3b89fb5aff7ad565a463730d57d"
+  },
+  "primary_inference": {
+    "method": "paired equal-scenario whole-stream symmetric absolute bootstrap-t",
+    "independent_units": 1120,
+    "checkpoints_are_independent": false,
+    "family": [
+      "J1",
+      "J2"
+    ],
+    "primary": {
+      "J1": {
+        "estimate": -0.00035558035714285715,
+        "se": 0.0002804559852191403,
+        "t_observed_abs": 1.2678651049825762,
+        "critical_abs_t": 2.251123293041059,
+        "critical_rank_one_based": 9750,
+        "ci": [
+          -0.0009869213581424428,
+          0.00027576064385672857
+        ],
+        "p_unadjusted": 0.2025,
+        "exceedances": 2024,
+        "degenerate_resamples": 0,
+        "observed_variance_zero": false,
+        "practical_classification": "EQUIVALENT",
+        "seed_uint64_decimal": "9076132160061475760",
+        "B": 9999,
+        "p_holm_adjusted": 0.405,
+        "holm_reject_fwer_0_05": false
+      },
+      "J2": {
+        "estimate": -0.00022723214285714285,
+        "se": 0.00027128601832779943,
+        "t_observed_abs": 0.8376109622522988,
+        "critical_abs_t": 2.2428080839231126,
+        "critical_rank_one_based": 9750,
+        "ci": [
+          -0.0008356746178180451,
+          0.0003812103321037594
+        ],
+        "p_unadjusted": 0.4067,
+        "exceedances": 4066,
+        "degenerate_resamples": 0,
+        "observed_variance_zero": false,
+        "practical_classification": "EQUIVALENT",
+        "seed_uint64_decimal": "14866205699164558107",
+        "B": 9999,
+        "p_holm_adjusted": 0.4067,
+        "holm_reject_fwer_0_05": false
+      }
+    },
+    "j_sum_direct_point_estimate": -0.0005828125,
+    "j_sum_integer_closure": true,
+    "cancellation_diagnostic": "COMPONENTWISE_EQUIVALENCE"
+  },
+  "final_interpretation": {
+    "J1": "PRACTICALLY_EQUIVALENT: the incremental effect of retaining residual-population semantics beyond champion semantics is contained within the prespecified practical-equivalence margin under the locked design.",
+    "J2": "PRACTICALLY_EQUIVALENT: the incremental effect of retaining continuation state beyond population semantics is contained within the prespecified practical-equivalence margin under the locked design.",
+    "decomposition": "COMPONENTWISE_EQUIVALENCE",
+    "derived_J_SUM": "The direct CHAMPION-RESEED minus PERSIST point estimate is descriptive and algebraically equals J1+J2; it is not an additional member of the fixed Holm family.",
+    "limits": [
+      "Results apply to the prespecified 14-scenario system, 80 independent streams per scenario and stated learner/intervention definitions.",
+      "J1 is not a universal value of diversity.",
+      "J2 is not a universal value of history or genealogy.",
+      "Neither estimand is an order-independent Shapley value.",
+      "No monetary cost-effectiveness conclusion is authorised before I07."
+    ]
+  },
+  "operational_closeout": {
+    "vm_safe_to_stop_after_verified_local_download": true,
+    "delete_disk_authorised": false,
+    "rerun_authorised": false,
+    "github_zenodo_publication_submission_authorised": false
+  },
+  "next_phase": "I07_DECISION_ECONOMICS",
+  "next_authority_boundary": "A plain next may authorise local I07 planning and analysis from the verified return only. It does not authorise cloud execution, GitHub writes, Zenodo, publication or submission."
+}
