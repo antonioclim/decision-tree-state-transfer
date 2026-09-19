@@ -1,0 +1,2 @@
+comparison	official_h3_loss_benefit	avoided_errors_per_eligible_2000	apw_premium	cpu_seconds_difference	elapsed_seconds_difference	prediction_milliseconds_difference	apw_per_avoided_error	apw_per_one_percentage_point
+STRUCTURAL-SHAM_MINUS_MATERIAL-REPLACE	0.018945346948247854	37.890693896495705	6.275005801810164	-0.0015654367602692036	-0.0012676545367834762	-0.54821833221165	0.1656080994175328	3.3121619883506557

@@ -1,0 +1,17 @@
+{
+  "contextual_break_even_sha256": "39e76945cda854c6c4e9f237f390838c4992ac46e113a03f9c32a6f2b05b06ac",
+  "contextual_cells": 1680,
+  "contextual_summary_sha256": "0773449e5cb4f6f3b4c8bb65de6d0ab4b111ce10e6ef4bf6b97ed5e1564f9896",
+  "decision_economics_sha256": "9912f5795a9d70bd520747fa6d758c98675ba14f3df80275b0b62562ee5e582e",
+  "f11_primary_sha256": "48d1137ac5e984b26ac549d9b826ea458eb2993638319bcd1bad9fd256636c6e",
+  "f13_started": false,
+  "internal_state_sha256": "fcbf1a0f348c33895d0ad48899be8a8ec4f65e7aeb2f046acd3fa548c91199f2",
+  "manuscript_modified": false,
+  "material_resource_sha256": "82a436cdfaadb93ca19574fd2881f5a773f2970d5981eb97e70e963a89300e93",
+  "numpy": "2.5.3",
+  "phase": "F12_DECISION_ECONOMICS",
+  "primary_records": 4480,
+  "python": "3.12.13",
+  "schema_version": 1,
+  "status": "COMPLETE_F12_ANALYSIS"
+}

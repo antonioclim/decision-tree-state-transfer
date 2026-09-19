@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "partition": "DEV_ONLY",
+  "record_types": {
+    "state": {
+      "required": ["schema_version","partition","scenario","realisation","optimiser","checkpoint","treatment","status","predictions","loss","resource"],
+      "treatments": ["PERSIST","RESTART-CART","CHAMPION-RESEED"],
+      "statuses": ["COMPLETE","ALGORITHMIC_FAILURE","TREATMENT_UNAVAILABLE"]
+    },
+    "material": {
+      "required": ["schema_version","partition","scenario","realisation","optimiser","checkpoint","treatment","status","eligible","predictions","loss","resource"],
+      "treatments": ["MATERIAL-REPLACE","STRUCTURAL-SHAM"],
+      "statuses": ["COMPLETE","PARENT_UNAVAILABLE","NO_ELIGIBLE_SITE"]
+    }
+  },
+  "failure_semantics": {
+    "state_treatment_unavailable": "full planned horizon retained with loss=1; never dropped from H1/H2",
+    "state_algorithmic_failure": "full planned horizon retained with null predictions scored as loss=1 after failure; never dropped",
+    "material_parent_unavailable": "both material arms retain the full horizon at loss=1; primary H3 ineligible and policy contrast zero",
+    "material_no_eligible_site": "both material arms deploy the same unmodified parent over the full horizon; primary H3 ineligible and policy contrast zero",
+    "integrity_or_data_failure": "no scientific record is admitted; repair/version before rerun"
+  },
+  "confirmation_authorised": false,
+  "notes": "F02/F05 development evidence only. H3 primary inference is conditional on eligible=true; no-eligible and unavailable records are retained for the separate policy-level estimand."
+}

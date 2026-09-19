@@ -1,0 +1,284 @@
+{
+  "arms": {
+    "CHAMPION-RESEED": {
+      "description": "Retain champion semantics, rebuild a fresh residual population and reset continuation state.",
+      "resets": [
+        "R",
+        "O"
+      ],
+      "retains": [
+        "C"
+      ]
+    },
+    "PERSIST": {
+      "description": "Restore the complete fitted learner state.",
+      "resets": [],
+      "retains": [
+        "C",
+        "R",
+        "O"
+      ]
+    },
+    "POPULATION-RESEED": {
+      "description": "Retain the complete population tree-semantics multiset and champion designation, but assign canonical fresh identities and reset all continuation metadata.",
+      "resets": [
+        "O"
+      ],
+      "retains": [
+        "C",
+        "R"
+      ]
+    }
+  },
+  "authoritative_inputs": {
+    "F09_protocol_lock": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "b12f7874d932e3b2095b38a1b58e80e1d86817d7434c53300dae9502c1dd28ef",
+      "source_object": "CONF_PROTOCOL_LOCK.json"
+    },
+    "F11_stream_estimators": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "4cbf28aa88da80de2b1ec9704cb8644d929f4169f00793a5380604d502e301c4",
+      "source_object": "STREAM_ESTIMATORS.tsv"
+    },
+    "F12_internal_state_resource": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "fcbf1a0f348c33895d0ad48899be8a8ec4f65e7aeb2f046acd3fa548c91199f2",
+      "source_object": "INTERNAL_STATE_RESOURCE.tsv"
+    },
+    "I00_checkpoint": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "c9e8016d4b74e3b8248005d3f7fbde4468405477d56a0a582b4d3a2903630300",
+      "source_object": "I00_INTEGRATED_REBUILD_CHECKPOINT_2026-09-11.zip"
+    },
+    "I01_checkpoint": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "1e4f3e38a77cf077156572e5be10c84a6a43b87845de783fc85eab074972079b",
+      "source_object": "I01_FORMAL_STATE_INTERVENTION_CALCULUS_CHECKPOINT_2026-09-11.zip"
+    },
+    "I01_poset": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "e2738730e09b4ea5d9944cf4e2f63904ccd47ea8e257a3c07ea5ae36f5c2c062",
+      "source_object": "I01_ADMISSIBLE_TRANSFER_POSET.md"
+    },
+    "I02_checkpoint": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "a6578150c90aee9487164dbabc17d503ae780b82c8ea6882213062a09f4feda6",
+      "source_object": "I02_COMPANION_KIT_REFERENCE_ARCHITECTURE_CHECKPOINT_2026-09-11.zip"
+    },
+    "I03_checkpoint": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "39ae2e1d65293557886de8294e18b91a853cf0a7a5f1b4683c0210a34064dc49",
+      "source_object": "I03_SOFTWARE_REMEDIATION_AND_ASSURANCE_CHECKPOINT_2026-09-11.zip"
+    },
+    "I04_checkpoint": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "dbca95843bba7e8447ba79a52e6be02a255fe735bd7cca7c8c7213911db0ccda",
+      "source_object": "I04_METHODOLOGY_AND_STATISTICS_HARDENING_CHECKPOINT_2026-09-12.zip"
+    },
+    "I04_decision_input": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "b27b59e39049770dd0c73f82a70223c61fe07841b2aaad84462aefb0bfaa89df",
+      "source_object": "I04_I05_DECISION_INPUT.md"
+    },
+    "learner_source": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "84d2049424ad3847e4e5d04a47df093471dedaaa53de89e7cc7b4e50691a6167",
+      "source_object": "learner.mjs"
+    },
+    "state_intervention_source": {
+      "environment_path_redacted_for_publication": true,
+      "sha256": "cd2656648b6d3a7a19d48625a0da9b9b815a11a77719448a8f35b4b6f8701224",
+      "source_object": "f02-state.mjs"
+    }
+  },
+  "composer_preflight_obligations": [
+    "Champion tree hash is identical before and after POPULATION-RESEED.",
+    "Population tree-hash multiset is identical before and after POPULATION-RESEED.",
+    "All inherited identifiers, ordinals, parent links, counters and event serials are absent from the reset state.",
+    "Canonical fresh ordering is deterministic and duplicate-safe.",
+    "Provenance is referentially closed and future-blind.",
+    "Construction work is charged and arm allowances remain prospectively matched.",
+    "No DEV qualification uses EXT feature or label values.",
+    "Differential and metamorphic tests pass before the first EXT source value is generated."
+  ],
+  "contingency": {
+    "if_campaign_is_infrastructure_invalid": "repair by versioned outcome-blind procedure; never score as learner failure",
+    "if_preflight_fails": "STOP_I06_NO_EXT_OUTCOMES; preserve Study 1-only article path",
+    "if_scientific_result_is_inconclusive": "report inconclusive; do not expand sample size or modify estimands post outcome"
+  },
+  "decision": "AUTHORISE_CONSTRAINED_NESTED_TRANSFER_STUDY",
+  "derived_identity": "J_SUM = J1 + J2 = E[L(CHAMPION-RESEED)-L(PERSIST)] under a common target and outcome definition.",
+  "failure_policy": {
+    "algorithm_failure_after_valid_start": "retain full planned denominator; remaining prediction slots receive 0-1 loss 1",
+    "environment_or_version_mismatch": "ENVIRONMENT_INVALID; no scientific record",
+    "exclude_failed_scientific_unit_from_mean": false,
+    "source_or_integrity_failure": "INFRASTRUCTURE_INVALID; no scientific record; versioned repair before rerun",
+    "treatment_unavailable": "retain full denominator; no fallback treatment"
+  },
+  "forbidden_interpretations": [
+    "J1 is not a universal value of diversity.",
+    "J2 is not a universal value of history or genealogy.",
+    "Neither estimand identifies order-independent Shapley values.",
+    "The study does not expand external validity beyond the specified scenario system.",
+    "No monetary cost-effectiveness claim is authorised."
+  ],
+  "i06_execution_authorised_after_explicit_user_next": true,
+  "i06_started": false,
+  "namespace": "DT-I05-NST-v1",
+  "outcome_informed_protocol_change": false,
+  "phase": "I05_EXTENSION_VALUE_OF_INFORMATION_AND_PROTOCOL_DECISION",
+  "population": {
+    "checkpoints": [
+      10000,
+      20000
+    ],
+    "checkpoints_are_independent": false,
+    "embedded_secondary_horizon": 500,
+    "fresh_namespace_disjoint_from_study1": true,
+    "independent_unit": "scenario_x_fresh_stream_realisation",
+    "independent_units_total": 1120,
+    "initialisation_rows": 2000,
+    "long_horizon_5000": false,
+    "n_per_scenario": 80,
+    "observations_per_stream": 22000,
+    "partition": "EXT",
+    "primary_future_horizon": 2000,
+    "scenario_count": 14,
+    "scenario_weights": "equal_by_design"
+  },
+  "prespecified_secondary": [
+    "J_SUM algebraic closure and non-pooled replication of Study 1 H2",
+    "LOCAL_TREE versus OBLIQUE family interaction for J1 and J2",
+    "checkpoint 20000 minus checkpoint 10000 effect modification for J1 and J2",
+    "500-observation embedded horizon for J1 and J2",
+    "separate APW, CPU, elapsed, RSS, prediction latency, state size and provenance size summaries"
+  ],
+  "primary_estimands": {
+    "J1": "E[L(CHAMPION-RESEED)-L(POPULATION-RESEED)] over the equal-scenario design mixture; positive favours residual-population retention.",
+    "J2": "E[L(POPULATION-RESEED)-L(PERSIST)] over the equal-scenario design mixture; positive favours continuation-state retention."
+  },
+  "primary_inference": {
+    "alpha_familywise_two_sided": 0.05,
+    "analysis_seeds": {
+      "CHECKPOINT_INTERACTION": {
+        "address": "DT-I05-NST-v1|EXT|ANALYSIS|CHECKPOINT_INTERACTION|B=9999",
+        "hex16": "1f808fedec323788",
+        "uint64_decimal": "2269972464227465096"
+      },
+      "FAMILY_INTERACTION": {
+        "address": "DT-I05-NST-v1|EXT|ANALYSIS|FAMILY_INTERACTION|B=9999",
+        "hex16": "5c0557c061d9dfaf",
+        "uint64_decimal": "6630802510159929263"
+      },
+      "J1_RESIDUAL_POPULATION": {
+        "address": "DT-I05-NST-v1|EXT|ANALYSIS|J1_RESIDUAL_POPULATION|B=9999",
+        "hex16": "7df4e61cb6f68bb0",
+        "uint64_decimal": "9076132160061475760"
+      },
+      "J2_CONTINUATION_STATE": {
+        "address": "DT-I05-NST-v1|EXT|ANALYSIS|J2_CONTINUATION_STATE|B=9999",
+        "hex16": "ce4f5f51a097531b",
+        "uint64_decimal": "14866205699164558107"
+      },
+      "J_SUM_TOTAL_H2": {
+        "address": "DT-I05-NST-v1|EXT|ANALYSIS|J_SUM_TOTAL_H2|B=9999",
+        "hex16": "5ad10af91d42a2e1",
+        "uint64_decimal": "6544023798600082145"
+      }
+    },
+    "bootstrap_resamples": 9999,
+    "classification": {
+      "BENEFICIAL": "simultaneous interval lower bound > +0.005",
+      "EQUIVALENT": "entire simultaneous interval lies inside [-0.005,+0.005]",
+      "HARMFUL": "simultaneous interval upper bound < -0.005",
+      "INCONCLUSIVE": "all other interval positions"
+    },
+    "family": [
+      "J1",
+      "J2"
+    ],
+    "family_size_fixed": 2,
+    "method": "paired equal-scenario stratified symmetric absolute bootstrap-t over whole independent streams",
+    "multiplicity": "Holm over the fixed two-estimand family",
+    "practical_delta": 0.005,
+    "resampling_unit": "whole stream within scenario; both checkpoints and all three arms travel together",
+    "simultaneous_intervals": "Bonferroni marginal confidence level 0.975 with absolute bootstrap-t critical values",
+    "zero_null_pvalue": "(1 + number(|t_star| >= |t_observed|))/(B+1)"
+  },
+  "primary_outcome": "mean prequential 0-1 loss over the next 2000 observations",
+  "protocol_id": "DT-I05-NST-v1.0",
+  "publication_derivative": {
+    "derived_from_sha256": "d8eaac46d96f0ffc986e3ac5937112910cb28010e6d2cdc42ab08255aa17a622",
+    "scientific_content_changed": false,
+    "transformation": "Only local environment path values in authoritative_inputs were replaced by source-object basenames; all scientific fields and SHA-256 bindings were preserved."
+  },
+  "randomness": {
+    "key_rule": "first 64 bits (16 lowercase hex) of SHA-256 over exact UTF-8 address",
+    "optimizer_address": "DT-I05-NST-v1|EXT|OPTIMISER|stream=<source_key_hex>",
+    "schedule_sha256": "9990ceb030a2e85690d5d6595f1f872965c20abfbeb4970f03fc706efc3b2652",
+    "shared_sequential_rng_cursor_forbidden": true,
+    "source_address": "DT-I05-NST-v1|EXT|SOURCE|scenario=<scenario>|r=<three-digit>"
+  },
+  "resource_policy": {
+    "apw_is_not_cpu": true,
+    "cpu_is_not_elapsed": true,
+    "monetary_conversion_forbidden": true,
+    "postfork_apw_proxy": 219450067179.46667,
+    "postfork_arm_stream_equivalents": 3360,
+    "postfork_cpu_hours_proxy_mean": 6.161912044037037,
+    "proxy_excludes": [
+      "parent training",
+      "tape generation",
+      "orchestration overhead",
+      "infrastructure recovery"
+    ]
+  },
+  "sample_size": {
+    "adaptive_reestimation": false,
+    "early_stopping": false,
+    "fixed_n_per_scenario": 80,
+    "gate": "minimum grid value with worst joint classification >=0.90 and maximum p95 primary half-width <=0.0015",
+    "historical_planning_source": "Study 1 H2 within-scenario residual distribution; planning proxy only, not a power guarantee",
+    "increment_correlation_grid": [
+      -0.75,
+      0,
+      0.75
+    ],
+    "simulation_replicates_per_cell": 3000,
+    "simulation_seed": 2026091205,
+    "total_independent_units": 1120,
+    "variance_inflation_grid": [
+      1,
+      2,
+      4
+    ]
+  },
+  "scenario_ids": [
+    "LOCAL_TREE-ABRUPT-MILD",
+    "LOCAL_TREE-ABRUPT-SEVERE",
+    "LOCAL_TREE-GRADUAL-MILD",
+    "LOCAL_TREE-GRADUAL-SEVERE",
+    "LOCAL_TREE-RECURRENT-MILD",
+    "LOCAL_TREE-RECURRENT-SEVERE",
+    "LOCAL_TREE-STATIONARY-NONE",
+    "OBLIQUE-ABRUPT-MILD",
+    "OBLIQUE-ABRUPT-SEVERE",
+    "OBLIQUE-GRADUAL-MILD",
+    "OBLIQUE-GRADUAL-SEVERE",
+    "OBLIQUE-RECURRENT-MILD",
+    "OBLIQUE-RECURRENT-SEVERE",
+    "OBLIQUE-STATIONARY-NONE"
+  ],
+  "schema_version": 1,
+  "state_atoms": {
+    "C": "incumbent champion tree semantics and champion designation",
+    "G": "referentially closed provenance certificate required for transferred semantics but not treated as an independent predictive atom",
+    "O": "continuation metadata including optimiser key/context, ordinals, identities, parent links, counters and event serials",
+    "R": "multiset of residual population tree semantics, excluding inherited continuation metadata"
+  },
+  "status": "IMMUTABLE_STUDY2_PROTOCOL_LOCKED_NO_OUTCOMES",
+  "study1_validity_depends_on_study2": false,
+  "study2_feature_or_label_values_generated_in_i05": false,
+  "study2_outcomes_generated_in_i05": false
+}

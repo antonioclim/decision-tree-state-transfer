@@ -1,0 +1,39 @@
+{
+  "loss_anchor_status": "PASS_ALL_THREE_PAIRWISE_LOSS_CONTRASTS_WITHIN_PRACTICAL_EQUIVALENCE_MARGIN",
+  "pareto_axes": [
+    "total_apw",
+    "process_cpu_seconds",
+    "elapsed_seconds",
+    "prediction_ns_per_prediction",
+    "state_snapshot_mib",
+    "provenance_mib"
+  ],
+  "permitted_claims": [
+    "All three Study 2 policies are pairwise practically equivalent in primary loss under the prespecified ±0.005 margin, with CHAMPION-RESEED versus PERSIST supported only as a derived conservative interval and no new p-value.",
+    "PERSIST has the lowest equal-scenario mean on total APW, process CPU, elapsed time, end-state snapshot bytes and provenance bytes; POPULATION-RESEED has the lowest mean prediction time.",
+    "Under practical-equivalence tie-breaking, PERSIST pointwise dominates CHAMPION-RESEED on the six declared canonical resource axes.",
+    "Using simultaneous exploratory resource intervals, PERSIST robustly dominates both alternatives on the five non-latency axes, while prediction-time direction remains unresolved for comparisons involving PERSIST.",
+    "Hard-budget results are descriptive sensitivity maps under explicitly listed data-derived caps, not externally calibrated deployment budgets."
+  ],
+  "phase": "I07_DECISION_ECONOMICS",
+  "prohibited_claims": [
+    "monetary cost-effectiveness",
+    "universal superiority of PERSIST",
+    "universal irrelevance of diversity, history or genealogy",
+    "arm-specific causal interpretation of shared-process peak RSS",
+    "latency percentile claims from total prediction time",
+    "all resource observations came from one uninterrupted host epoch",
+    "new confirmatory p-values or modification of the J1/J2 family",
+    "order-independent or Shapley component attribution"
+  ],
+  "required_qualifiers": [
+    "name the resource axis and unit",
+    "state that checkpoint values were averaged within stream and streams are the independent units",
+    "state that the target is the equal mixture of fourteen prespecified scenarios",
+    "separate deterministic APW from realised CPU, elapsed time and storage",
+    "state that money is undefined without an audited external price map"
+  ],
+  "rss_in_pareto": false,
+  "schema_version": 1,
+  "status": "PASS_I07_CLAIMS_CONTRACT"
+}

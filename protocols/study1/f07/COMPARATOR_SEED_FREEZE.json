@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "scope": "F07_DEV_COMPARATOR_SEEDS",
+  "partition": "DEV",
+  "methods": ["HAT", "ARF", "EFDT", "SRP", "FROZEN_CART", "ROLLING_CART", "PLASTIC"],
+  "seeded_methods": ["HAT", "ARF", "SRP", "FROZEN_CART", "ROLLING_CART", "PLASTIC"],
+  "unseeded_methods": ["EFDT"],
+  "source_streams": 42,
+  "rows": 294,
+  "seeded_rows": 252,
+  "schedule_format": "scenario_id\\trealisation\\tstream_key_hex\\tmethod\\tseed_applied\\tseed_hex\\tseed_uint32\\taddress_sha256\\n",
+  "seed_algorithm": "first 32 bits (8 lowercase hex) of SHA-256 over exact UTF-8 DT-P9-v1|DEV|COMPARATOR|<method>|stream=<stream_key_hex>",
+  "canonical_tsv_sha256": "0f67dc8d8b711773405128b8c4ecc4cb5a3adb7fa5c112bacb90235bc29bb1db",
+  "phase9_stream_schedule_sha256": "3e38cc71403537dd4112e2cf683ef5715f8073f6",
+  "collision_count": 0,
+  "examples": {
+    "first_seeded": {"scenario": "LOCAL_TREE-STATIONARY-NONE", "realisation": 0, "stream_key": "9463861a45169367", "method": "HAT", "seed_hex": "68ccecaf", "seed_uint32": 1758260399},
+    "last_seeded": {"scenario": "OBLIQUE-RECURRENT-SEVERE", "realisation": 2, "stream_key": "7c3ee68794483ee8", "method": "PLASTIC", "seed_hex": "dce6a130", "seed_uint32": 3706102064}
+  },
+  "confirmation_authorised": false,
+  "scientific_admission": false
+}

@@ -1,0 +1,63 @@
+{
+  "rules": [
+    {
+      "licence": "PolyForm-Noncommercial-1.0.0",
+      "patterns": [
+        "assets/code/**",
+        "software/**",
+        "analysis/**/*.py",
+        "analysis/**/*.mjs",
+        "test/**",
+        "validation/**",
+        "package.json",
+        "package-lock.json",
+        ".gitignore",
+        ".gitattributes",
+        ".node-version"
+      ],
+      "precedence": 50
+    },
+    {
+      "licence": "CC-BY-NC-4.0",
+      "patterns": [
+        "README.md",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "docs/**",
+        "protocols/**",
+        "analysis/**",
+        "data/**",
+        "environment/**",
+        "PUBLIC_RELEASE_GATE.json",
+        "REMOTE_PUBLICATION_PLAN.json",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "CITATION.cff",
+        "metadata/**"
+      ],
+      "precedence": 20
+    },
+    {
+      "licence": "respective-document-terms",
+      "patterns": [
+        "LICENSE",
+        "LICENSES/**"
+      ],
+      "precedence": 30
+    },
+    {
+      "licence": "CC-BY-NC-4.0",
+      "patterns": [
+        "LICENSE-POLICY.md",
+        "NOTICE.md",
+        "COMMERCIAL-LICENSING.md",
+        "licensing/**"
+      ],
+      "precedence": 40
+    }
+  ],
+  "schema_version": 1,
+  "selection_rule": "highest_precedence_number_wins",
+  "status": "ADOPTED_FOR_V1.0.0_PUBLIC_RELEASE",
+  "unmatched_path_policy": "verification_failure"
+}

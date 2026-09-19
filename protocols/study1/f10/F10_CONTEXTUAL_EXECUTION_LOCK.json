@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "phase": "F10_CONFIRMATORY_CAMPAIGN_CONTEXTUAL",
+  "status": "FROZEN_BEFORE_CONTEXTUAL_EXECUTION",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "role": "CONTEXTUAL_PREDICTIVE_RESOURCE_BENCHMARK_ONLY",
+  "h1_h2_h3_identification": false,
+  "primary_conf_aggregate": {
+    "run_id": 34528472017,
+    "execution_commit": "d5df46c7ecc784c1cc1381424a6be8ba31faefe4",
+    "artifact_id": 10184027303,
+    "artifact_name": "f10-primary-recovery02-aggregate-d5df46c7ecc784c1cc1381424a6be8ba31faefe4",
+    "artifact_digest": "sha256:9f67dd5dd0065b8f77bdc4827f098fe2fb4787ca9677fca8edfbd8b552a9c993",
+    "records": 4480,
+    "raw_record_root_sha256": "35f67440cf96cde5bf72dd767aba7a61339b1f375cfdcc04f2e271d38f9387f5",
+    "source_digest_root_sha256": "f0e9a072f67156978cb576f3aec5e81fda817b0c41d1bdc3505fe3f9e258cc56",
+    "contextual_bridge_rows": 280,
+    "contextual_bridge_sha256": "aca2abe9d241fbedcbde15ceb161f1d2cd23417e92c314fc60df7ff935bce73a"
+  },
+  "f09_schedule_sha256": "cb005bc52ca98255c834ccd04eabb14c6ece3ecf96a4e68e7a83f346485b3c93",
+  "streams": 280,
+  "streams_per_scenario": 20,
+  "methods": ["HAT", "ARF", "EFDT", "SRP", "FROZEN_CART", "ROLLING_CART"],
+  "cells": 1680,
+  "source": {
+    "rows": 26000,
+    "warmup_rows": 2000,
+    "scored_rows": 24000,
+    "order": "features -> predict -> reveal label -> score -> update/refit",
+    "digest_rule": "Each regenerated feature and label tape must exactly match the SHA-256 bridge emitted by the validated primary CONF aggregate.",
+    "future_label_access": false
+  },
+  "seeds": {
+    "formula": "first 32 bits of SHA-256 over DT-C8E1-F09-v1|CONF|COMPARATOR|method=<method>|stream=<source_key_hex>",
+    "efdt": null,
+    "post_outcome_change": false
+  },
+  "runtime": {
+    "runner": "ubuntu-24.04",
+    "python": "3.12.13",
+    "pip": "25.0.1",
+    "river": "0.26.1",
+    "scikit_learn": "1.9.0",
+    "node": "22.16.0",
+    "python_lock": "assets/code/confirmatory/requirements-f07-comparators.lock",
+    "python_lock_sha256": "6448a068c0e696e42581fcba0597c7eb14ad9d2fde07fa115c91109c1aba90f3",
+    "thread_environment": {
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "cart": {
+    "rolling_window_rows": 2000,
+    "rolling_refit_every_revealed_labels": 100,
+    "frozen_fit": "first 2000 revealed labels only"
+  },
+  "resources": {
+    "hard_process_rss_limit_mib": 2048,
+    "rss_poll_interval_ms": 50,
+    "required": ["process_cpu_ns", "elapsed_ns", "peak_rss_bytes", "prediction_calls", "update_or_fit_calls", "labels_consumed", "prediction_latency", "algorithm_specific_size"],
+    "interpretation": "Realised external implementation cost only; not APW and not FLOP equivalence."
+  },
+  "failure_policy": {
+    "environment_or_version_mismatch": "ENVIRONMENT_INVALID; no scientific comparator record",
+    "source_integrity_failure": "INFRASTRUCTURE_INVALID; no scientific comparator record",
+    "algorithm_failure_after_valid_admission": "ALGORITHMIC_FAILURE; retain observed errors and assign loss=1 to every remaining planned scored slot",
+    "rss_limit_after_valid_admission": "ALGORITHMIC_FAILURE_RESOURCE_LIMIT; same full-denominator loss=1 rule",
+    "silent_retry": false,
+    "fallback": false,
+    "exclude_failed_cell": false
+  },
+  "execution": {
+    "shards": 56,
+    "streams_per_shard": 5,
+    "cells_per_shard": 30,
+    "stream_assignment": "contextual bridge row ordinal modulo 56",
+    "method_order_within_stream": "ascending SHA-256 of DT-C8E1-F09-v1|CONF|CONTEXTUAL-ORDER|stream=<source_key_hex>|method=<method>",
+    "fresh_os_process_per_cell": true,
+    "parallel_scored_cells_per_runner": 1,
+    "max_parallel_runner_jobs": 20,
+    "job_timeout_minutes": 60,
+    "job_timeout_semantics": "infrastructure ceiling only; never scientific failure or loss=1",
+    "matrix_fail_fast": false
+  },
+  "prohibitions": [
+    "No PLASTIC execution",
+    "No comparator result enters H1/H2/H3 inference or multiplicity",
+    "No post-outcome constructor, seed, source, subset or failure-policy changes",
+    "No F11 inference in F10"
+  ],
+  "scientific_interpretation_authorised": false,
+  "f11_authorised": false
+}

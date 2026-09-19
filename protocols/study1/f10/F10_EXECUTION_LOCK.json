@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "phase": "F10_CONFIRMATORY_CAMPAIGN",
+  "status": "EXECUTION_TOPOLOGY_LOCKED_BEFORE_CONF_VALUES",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "protocol_namespace": "DT-C8E1-F09-v1",
+  "conf_values_generated_before_this_lock": false,
+  "primary_records": 4480,
+  "primary_schedule_sha256": "cb005bc52ca98255c834ccd04eabb14c6ece3ecf96a4e68e7a83f346485b3c93",
+  "primary_medium_update_cap_apw": 3110120,
+  "provenance_backend": "CompactProvenanceIndex",
+  "provenance_qualification": {
+    "disk_reference_semantics": "exact match at checkpoints 10000 and 20000 on the full predeclared DEV reference parent",
+    "disk_reference_run_id": 34461919231,
+    "compact_equivalence_run_id": 34462541009,
+    "compact_equivalence_artifact_sha256": "d003cf2ea88be32c935a98057295eb8090fa9817b076589b3be9dc5010499535",
+    "aggressive_deployed_only_backend_admitted": false,
+    "reason": "two pre-CONF equivalence attempts failed on persistent edge-source-chain validation; the optimisation is quarantined and not used for CONF"
+  },
+  "primary_execution": {
+    "shards": 56,
+    "records_per_shard": 80,
+    "row_assignment": "global_schedule_index modulo 56",
+    "worker_processes_per_runner": 2,
+    "runner": "GitHub-hosted ubuntu-24.04 standard x64",
+    "node": "22.16.0",
+    "max_parallel_runner_jobs": 20,
+    "job_timeout_minutes": 120,
+    "timeout_interpretation": "infrastructure safety ceiling only; a timeout is INFRASTRUCTURE_INVALID and never an algorithmic all-loss-one scientific result",
+    "scientific_timeout": null,
+    "matrix_fail_fast": true,
+    "record_policy": "one content-addressed JSON record per independent stream; no inferential summary in F10",
+    "source_policy": "each stream is materialised exactly once inside its worker into separate feature and label tapes, re-read and SHA-256 checked before model consumption, then temporary tape bytes may be deleted after the content-addressed record stores their digests",
+    "elapsed_time_note": "elapsed metrics are measured under the locked two-process/two-vCPU topology and must not be reinterpreted as uncontended latency",
+    "process_cpu_note": "process_cpu_ns remains per worker process and is the preferred realised CPU quantity for later resource comparison"
+  },
+  "primary_aggregation": {
+    "requires_all_56_shards": true,
+    "requires_all_4480_content_addressed_records": true,
+    "copies_raw_records_into_one aggregate artifact": true,
+    "persists_expanded_f09_schedule": true,
+    "emits_contextual_source_digest_bridge_for_280_selected_streams": true,
+    "contains_h1_h2_h3_inference": false,
+    "scientific_interpretation_authorised": false
+  },
+  "contextual_comparator_execution": {
+    "authorised_after_primary_source_digest_bridge_exists": true,
+    "selected_streams": 280,
+    "methods": ["HAT", "ARF", "EFDT", "SRP", "FROZEN_CART", "ROLLING_CART"],
+    "same_source_bytes_requirement": "regenerated CONF tapes must match the feature/label SHA-256 values emitted by the primary campaign for the same selected stream",
+    "python": "3.12.13",
+    "pip": "25.0.1",
+    "river": "0.26.1",
+    "scikit_learn": "1.9.0",
+    "python_lock_sha256": "6448a068c0e696e42581fcba0597c7eb14ad9d2fde07fa115c91109c1aba90f3",
+    "resource_role": "contextual predictive/resource benchmark only; never H1-H3 identification"
+  },
+  "immutability_after_first_conf_value": {
+    "sample_size": true,
+    "seed_schedule": true,
+    "hypotheses": true,
+    "delta": true,
+    "failure_policy": true,
+    "primary_budget": true,
+    "comparator_subset": true,
+    "primary_execution_topology": true,
+    "repair_rule": "implementation/infrastructure faults require an explicit versioned repair record and rerun of only affected planned units; no outcome-informed replacement, seed change or silent retry"
+  }
+}

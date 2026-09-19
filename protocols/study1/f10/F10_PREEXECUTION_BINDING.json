@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "phase": "F10_CONFIRMATORY_CAMPAIGN",
+  "status": "PREEXECUTION_BINDING_NO_CONF_VALUES",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "protocol_namespace": "DT-C8E1-F09-v1",
+  "base_f09_commit": "e854b07727ada9972c3f4ae5669635f0e6d07350",
+  "conf_feature_or_label_values_generated": false,
+  "conf_execution_started": false,
+  "manuscript_update_authorised": false,
+  "scientific_interpretation_phase": "F11_NOT_F10",
+  "primary_population": {
+    "scenarios": 14,
+    "n_per_scenario": 320,
+    "independent_units": 4480,
+    "checkpoints": [10000, 20000],
+    "primary_horizon": 2000,
+    "independent_unit": "scenario_x_stream_realisation"
+  },
+  "apw_binding": {
+    "source_rule": "existing frozen DT-C8E1-P9-v1.0 resource calibration carried forward by F02/F05/F09",
+    "calibration_script": "assets/code/confirmatory/calibrate-dev.mjs",
+    "calibration_partition": "DEV_ONLY",
+    "cold_cases": 168,
+    "B0_formula": "2 * maximum complete cold-initialisation APW across all 84 DEV optimiser keys at checkpoints 10000 and 20000",
+    "main_budget_multiplier": 2,
+    "primary_parent_and_state_update_cap_formula": "2 * B0",
+    "material_parent": "same medium-budget persistent pre-update parent",
+    "outcome_informed": false,
+    "numeric_value_known_before_conf": false,
+    "numeric_value_must_be_persisted_before_conf": true
+  },
+  "preflight": {
+    "purpose": "evaluate the already-frozen APW calibration and measure bounded DEV-only implementation feasibility before any CONF value exists",
+    "must_verify_f09_seed_schedule_sha256": "cb005bc52ca98255c834ccd04eabb14c6ece3ecf96a4e68e7a83f346485b3c93",
+    "must_run_targeted_state_material_tests": true,
+    "dev_feasibility_cases": 1,
+    "dev_feasibility_selection": "worker=0 of workers=84 over the existing canonical DEV case order",
+    "may_change_scientific_design": false,
+    "may_generate_conf_values": false
+  },
+  "f10_execution_rule": {
+    "conf_materialisation_before_method_consumption": true,
+    "separate_feature_and_label_tapes": true,
+    "same_source_bytes_across_paired_arms": true,
+    "same_source_bytes_for_contextual_comparators_when_selected": true,
+    "silent_retry": false,
+    "fallback": false,
+    "post_outcome_budget_change": false,
+    "post_outcome_seed_change": false,
+    "post_outcome_sample_size_change": false
+  },
+  "actions_cost_policy": "Run one bounded DEV-only preflight first. Launch CONF only if the preflight establishes a feasible execution topology; do not rerun failed hosted work without diagnosis."
+}

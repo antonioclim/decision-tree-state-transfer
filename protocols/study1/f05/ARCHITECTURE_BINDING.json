@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "phase": "F05",
+  "date": "2026-09-09",
+  "base_commit": "9247e00276087356bc06867519419b4b6cad1f51",
+  "base_tree": "203d465331a95a0e55586e5d9e6237edabe035b1",
+  "architecture": "F02_RESEARCH_ARCHITECTURE_LOCK",
+  "novelty_firewall": "F01",
+  "implementation_audit": "F04",
+  "scope": "Implementation-only qualification of F02 state and material interventions on DEV/FIXTURE inputs. No CONF, no sample-size selection and no comparator campaign.",
+  "state_treatments": ["PERSIST", "RESTART-CART", "CHAMPION-RESEED"],
+  "material_treatments": ["MATERIAL-REPLACE", "STRUCTURAL-SHAM"],
+  "primary_material_estimand": "conditional on verified eligible connected inherited material",
+  "practical_threshold": 0.005,
+  "frozen_boundaries": {
+    "future_outcomes_for_selection": false,
+    "resource_matching": true,
+    "shared_stream_realisation": true,
+    "treatment_random_namespaces_isolated": true,
+    "historical_phase9_and_v3_material_artifacts_mutated": false,
+    "confirmation_authorised": false
+  }
+}

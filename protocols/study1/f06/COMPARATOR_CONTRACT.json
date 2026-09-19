@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "phase": "F06_COMPARATOR_INTEGRATION",
+  "status": "COMPLETE_CONTRACT_RUNTIME_GATES_EXPLICIT",
+  "scientific_admission": false,
+  "confirmation_authorised": false,
+  "purpose": "Define a reviewer-defensible benchmark surface without conflating external benchmarking with the F02 causal intervention estimands.",
+  "causal_firewall": {
+    "f02_treatments": ["PERSIST", "RESTART-CART", "CHAMPION-RESEED", "MATERIAL-REPLACE", "STRUCTURAL-SHAM"],
+    "rule": "External comparators do not estimate H1, H2 or H3. They answer only comparative predictive/resource-performance questions.",
+    "prohibited_claim": "A favourable benchmark difference is not evidence that inherited state or inherited material caused the difference."
+  },
+  "common_evaluation_semantics": {
+    "stream_order": "chronological and identical for every method within a scenario-realisation",
+    "future_label_access": "forbidden until the current prediction has been emitted and scored",
+    "scored_step_order": ["features_available", "predict", "reveal_label", "score_0_1_loss", "update_if_method_updates"],
+    "warmup": "F07 must bind the exact pre-cut history/cut schedule to the F02 DEV design; F06 does not invent a new cut.",
+    "primary_predictive_outcome": "mean prequential 0-1 loss over the declared future horizon",
+    "missing_prediction": "counts as 0-1 loss = 1",
+    "same_source_requirement": "same immutable source bytes, scenario, realisation and horizon as the corresponding study cell",
+    "seeds": "predeclared, method-origin isolated and reused only as paired scenario-realisation scheduling keys, never copied from internal learner state"
+  },
+  "resource_fairness": {
+    "internal_causal_arms": "retain F02/F05 APW matching; do not alter it for benchmark convenience",
+    "external_benchmarks": "do not force artificial APW equality across fundamentally different algorithms; execute native algorithms under the same declared hardware/runtime policy and report their realised resource use",
+    "required_external_measures": ["process_cpu_ns", "elapsed_ns", "peak_rss_bytes", "prediction_calls", "update_or_fit_calls", "prediction_latency_distribution", "labels_consumed", "algorithm_specific_size_or_member_count_when_available"],
+    "decision_economics_use": "F12 may use predictive loss versus measured resource/cost ratios, Pareto frontiers and break-even regions; it must not invent monetary costs."
+  },
+  "comparators": [
+    {
+      "id": "HAT",
+      "role": "required_streaming_baseline",
+      "admission_for_f07": "REQUIRED_AFTER_RUNTIME_QUALIFICATION",
+      "implementation": "river.tree.HoeffdingAdaptiveTreeClassifier",
+      "distribution": "river==0.26.1",
+      "profile": "River 0.26.1 reference defaults supplied explicitly, with a predeclared seed",
+      "reason": "canonical drift-adaptive single-tree baseline with alternate-subtree replacement",
+      "licence": "BSD-3-Clause",
+      "runtime_status_f06": "SOURCE_SEMANTICS_VERIFIED; LOCAL_DISTRIBUTION_NOT_AVAILABLE"
+    },
+    {
+      "id": "ARF",
+      "role": "required_streaming_ensemble_baseline",
+      "admission_for_f07": "REQUIRED_AFTER_RUNTIME_QUALIFICATION",
+      "implementation": "river.forest.ARFClassifier",
+      "distribution": "river==0.26.1",
+      "profile": "River 0.26.1 reference defaults supplied explicitly, with a predeclared seed",
+      "reason": "strong drift-adaptive ensemble baseline with per-tree warning/drift handling",
+      "licence": "BSD-3-Clause",
+      "runtime_status_f06": "SOURCE_SEMANTICS_VERIFIED; LOCAL_DISTRIBUTION_NOT_AVAILABLE"
+    },
+    {
+      "id": "EFDT",
+      "role": "required_structural_streaming_baseline",
+      "admission_for_f07": "REQUIRED_AFTER_RUNTIME_QUALIFICATION",
+      "implementation": "river.tree.ExtremelyFastDecisionTreeClassifier",
+      "distribution": "river==0.26.1",
+      "profile": "River 0.26.1 reference defaults supplied explicitly; no seed parameter exists for this class",
+      "reason": "incremental split-revision tree and the direct structural antecedent of PLASTIC",
+      "licence": "BSD-3-Clause",
+      "runtime_status_f06": "SOURCE_SEMANTICS_VERIFIED; LOCAL_DISTRIBUTION_NOT_AVAILABLE"
+    },
+    {
+      "id": "SRP",
+      "role": "required_streaming_ensemble_baseline",
+      "admission_for_f07": "REQUIRED_AFTER_RUNTIME_QUALIFICATION",
+      "implementation": "river.ensemble.SRPClassifier",
+      "distribution": "river==0.26.1",
+      "profile": "River 0.26.1 reference defaults supplied explicitly, with a predeclared seed",
+      "reason": "competitive streaming ensemble using random patches, resampling and drift detection",
+      "licence": "BSD-3-Clause",
+      "runtime_status_f06": "SOURCE_SEMANTICS_VERIFIED; LOCAL_DISTRIBUTION_NOT_AVAILABLE"
+    },
+    {
+      "id": "FROZEN_CART",
+      "role": "required_contextual_control",
+      "admission_for_f07": "REQUIRED_AFTER_RUNTIME_QUALIFICATION",
+      "implementation": "sklearn.tree.DecisionTreeClassifier",
+      "distribution": "scikit-learn==1.9.0",
+      "profile": "scikit-learn 1.9.0 reference defaults supplied explicitly, fixed random_state",
+      "reason": "separates adaptation value from a no-post-cut-update batch tree",
+      "licence": "BSD-3-Clause",
+      "runtime_status_f06": "SOURCE_SEMANTICS_VERIFIED; LOCAL_ENVIRONMENT_HAS_1.8.0_AND_IS_CORRECTLY_REJECTED"
+    },
+    {
+      "id": "ROLLING_CART",
+      "role": "required_contextual_control",
+      "admission_for_f07": "REQUIRED_AFTER_RUNTIME_QUALIFICATION_AND_F07_WINDOW_LOCK",
+      "implementation": "sklearn.tree.DecisionTreeClassifier",
+      "distribution": "scikit-learn==1.9.0",
+      "profile": "same CART constructor as FROZEN_CART; rolling window and refit cadence are F07 prospective design parameters",
+      "reason": "contextual retraining control; refits only after the triggering row has been predicted, scored and revealed",
+      "licence": "BSD-3-Clause",
+      "runtime_status_f06": "ORDER_SEMANTICS_TESTED_WITH_DEPENDENCY_FREE_FIXTURE; ACTUAL_1.9.0_RUNTIME_PENDING"
+    },
+    {
+      "id": "PLASTIC",
+      "role": "nearest_neighbour_required_if_runtime_qualified",
+      "admission_for_f07": "REQUIRED_CANDIDATE; NO_APPROXIMATION_ALLOWED",
+      "implementation": "official upstream MOA Java implementation or official CapyMOA-PLASTIC bridge only",
+      "upstream_java_repo": "heymarco/PLASTIC",
+      "upstream_java_commit": "5a75f694a4ece8d6eb8714e8053726942130b10c",
+      "upstream_python_repo": "heymarco/CapyMOA-PLASTIC",
+      "upstream_python_commit": "d6b9e3d2014adbce361ee7b1029bf92090ae81e2",
+      "paper_doi": "10.1007/978-3-031-70362-1_3",
+      "licence_note": "The official Java PLASTIC repository contains GPL-3.0 text. Do not vendor/relicense its source into this PolyForm repository. The CapyMOA-PLASTIC snapshot has no root LICENSE file verified in F06, so its redistribution terms must not be inferred.",
+      "runtime_status_f06": "OFFICIAL_CODE_VERIFIED; BUILD/RUNTIME_NOT_YET_QUALIFIED; NO_NUMERIC_RESULTS_ADMISSIBLE"
+    },
+    {
+      "id": "ILEAD",
+      "role": "literature_only_until_exact_code_obtained",
+      "admission_for_f07": "EXCLUDED_FROM_NUMERIC_BENCHMARK_AT_F06",
+      "paper_doi": "10.1007/s11334-026-00659-z",
+      "reason": "published 18 August 2026 and scientifically relevant, but the article states that code is available only upon reasonable request; an approximate reimplementation would be a straw-man",
+      "runtime_status_f06": "NO_PUBLIC_CANONICAL_CODE_VERIFIED"
+    },
+    {
+      "id": "CEVOT",
+      "role": "literature_only_until_faithful_runtime_verified",
+      "admission_for_f07": "EXCLUDED_FROM_NUMERIC_BENCHMARK_AT_F06",
+      "paper_doi": "10.1016/j.procs.2016.05.508",
+      "reason": "key evolutionary-tree prior art but no canonical runnable implementation was qualified in F06",
+      "runtime_status_f06": "NO_FAITHFUL_RUNTIME_QUALIFIED"
+    },
+    {
+      "id": "BTAD",
+      "role": "literature_only_mechanistic_context",
+      "admission_for_f07": "EXCLUDED_FROM_NUMERIC_BENCHMARK_AT_F06",
+      "paper_doi": null,
+      "reason": "relevant repair/retraining analogue, but F01 did not verify a DOI and F06 did not qualify an exact runtime; do not fabricate either",
+      "runtime_status_f06": "NO_FAITHFUL_RUNTIME_QUALIFIED"
+    }
+  ],
+  "legacy_firewall": {
+    "historical_adapter": "assets/code/confirmatory/r06_river_adapter.py",
+    "historical_distribution": "river==0.22.0",
+    "rule": "Preserve historical R06 evidence unchanged. Do not reuse its depth-8/majority-class profiles as the redesigned F06 reference baselines and do not relabel historical results as River 0.26.1."
+  },
+  "failure_semantics": {
+    "dependency_or_version_mismatch": "ENVIRONMENT_INVALID; admit no scientific record; never substitute a different library/version/algorithm",
+    "source_integrity_failure": "INFRASTRUCTURE_INVALID; repair/version before rerun; never score as scientific loss",
+    "unsupported_known_configuration_before_run": "COMPARATOR_UNAVAILABLE; F07/F09 must resolve, remove prospectively with justification or block protocol freeze",
+    "algorithm_failure_after_valid_admission": "ALGORITHMIC_FAILURE; preserve the planned cell and failure point; F07/F09 must freeze whether post-failure slots are scored as operational loss or summarised through a joint loss-plus-failure estimand before CONF",
+    "no_silent_retry": true,
+    "no_fallback_model": true
+  },
+  "f07_required_bindings": ["exact scenario-realisation/cut schedule shared with F02 DEV", "seed schedule", "ROLLING_CART window length and refit cadence", "PLASTIC/PLASTIC-A/EFHAT runtime decision after official-runtime qualification", "fully transitive hash-verified Python environment or container", "JVM/MOA/CapyMOA build identity if PLASTIC is admitted", "process isolation, thread policy and resource-sampling protocol", "algorithmic-failure estimand rule", "small DEV pilot cells only"],
+  "f09_gate": "No CONF protocol may be frozen while any comparator marked required has an unresolved runtime, timing, resource or failure-semantics gate."
+}

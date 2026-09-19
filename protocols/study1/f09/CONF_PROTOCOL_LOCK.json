@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "phase": "F09_IMMUTABLE_CONF_PROTOCOL_LOCK",
+  "status": "IMMUTABLE_CONF_PROTOCOL_LOCKED",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "namespace": "DT-C8E1-F09-v1",
+  "base_f08_commit": "1b3621efcce02446678e5cb8ad145ff64dd29038",
+  "conf_values_generated_before_lock": false,
+  "scientific_admission": false,
+  "manuscript_update_authorised": false,
+  "f10_execution_authorised_after_explicit_user_next": true,
+  "direct_conf_execution_in_f09": false,
+  "population": {
+    "partition": "CONF",
+    "scenario_count": 14,
+    "n_per_scenario": 320,
+    "independent_units_total": 4480,
+    "independent_unit": "scenario_x_stream_realisation",
+    "optimizer_keys_per_stream": 1,
+    "optimizer_seed_replicates_are_independent": false,
+    "checkpoints": [10000, 20000],
+    "checkpoints_are_independent": false,
+    "observations_per_stream": 26000,
+    "initialisation_rows": 2000,
+    "primary_future_horizon": 2000,
+    "embedded_short_horizon": 500,
+    "long_horizon_5000_scope": "hash-ranked contextual subset only; 20 streams per scenario",
+    "scenario_weights": "equal by design"
+  },
+  "scenario_ids": [
+    "LOCAL_TREE-STATIONARY-NONE",
+    "LOCAL_TREE-ABRUPT-MILD",
+    "LOCAL_TREE-ABRUPT-SEVERE",
+    "LOCAL_TREE-GRADUAL-MILD",
+    "LOCAL_TREE-GRADUAL-SEVERE",
+    "LOCAL_TREE-RECURRENT-MILD",
+    "LOCAL_TREE-RECURRENT-SEVERE",
+    "OBLIQUE-STATIONARY-NONE",
+    "OBLIQUE-ABRUPT-MILD",
+    "OBLIQUE-ABRUPT-SEVERE",
+    "OBLIQUE-GRADUAL-MILD",
+    "OBLIQUE-GRADUAL-SEVERE",
+    "OBLIQUE-RECURRENT-MILD",
+    "OBLIQUE-RECURRENT-SEVERE"
+  ],
+  "source_identity": {
+    "distributional_generator_semantics": "same 14-scenario family/regime/severity generator semantics as the frozen Phase 9/F08 synthetic design",
+    "conf_source_address": "DT-C8E1-F09-v1|CONF|SOURCE|scenario=<scenario>|r=<three-digit realisation>",
+    "source_key": "first 64 bits (16 lowercase hex) of SHA-256 over the exact UTF-8 CONF source address",
+    "source_values_generated_in_f09": false,
+    "future_label_separation_required": true,
+    "materialisation_rule": "F10 materialises each CONF source exactly once into separately hashed feature and label tapes before any method consumes it; all paired arms and contextual comparators assigned to that stream consume the same source bytes",
+    "conf_and_dev_namespaces_separate": true
+  },
+  "optimizer_randomness": {
+    "base_key_address": "DT-C8E1-F09-v1|CONF|OPTIMISER|stream=<source_key_hex>",
+    "base_key": "first 64 bits of SHA-256 over the exact UTF-8 base-key address",
+    "one_base_key_per_independent_stream": true,
+    "treatment_rng": "addressed substreams derived from the common base key plus treatment, checkpoint and semantic role; never a shared sequential RNG cursor",
+    "post_outcome_seed_replacement": false
+  },
+  "treatments": {
+    "state": ["PERSIST", "RESTART-CART", "CHAMPION-RESEED"],
+    "material": ["MATERIAL-REPLACE", "STRUCTURAL-SHAM"],
+    "h1": "E[L(RESTART-CART)-L(PERSIST)]",
+    "h2": "E[L(CHAMPION-RESEED)-L(PERSIST)]",
+    "h3": "E[L(MATERIAL-REPLACE)-L(STRUCTURAL-SHAM)|eligible] under the equal-scenario design-mixture checkpoint distribution",
+    "h3_itt_secondary": "attempt(REPLACE)-attempt(SHAM), all forks with no-eligible as the frozen no-op zero contrast",
+    "positive_sign": "favours retention/keeping the relevant fitted state or material",
+    "primary_outcome": "mean prequential 0-1 loss over the next 2000 observations",
+    "balanced_error_and_class_specific_metrics": "secondary only"
+  },
+  "stream_level_estimators": {
+    "h1": "arithmetic mean of the two checkpoint-specific 2000-row RESTART-CART minus PERSIST loss contrasts for the independent stream",
+    "h2": "arithmetic mean of the two checkpoint-specific 2000-row CHAMPION-RESEED minus PERSIST loss contrasts for the independent stream",
+    "h3_components": "for checkpoint c, e_ic is eligibility and d_ic is replace-minus-sham contrast when eligible; A_i=(e_i10000*d_i10000+e_i20000*d_i20000)/2; Q_i=(e_i10000+e_i20000)/2",
+    "h3_estimator": "[mean over equal-weight scenarios of stream-mean A_i] / [mean over equal-weight scenarios of stream-mean Q_i]",
+    "h3_zero_observed_eligibility": "NOT_ESTIMABLE; retain multiplicity slot with unadjusted p=1 and simultaneous interval [-1,1]",
+    "h3_itt": "equal-scenario mean of the stream-level average over both checkpoint attempt-policy contrasts, with no-eligible equal to zero"
+  },
+  "primary_inference": {
+    "alpha_familywise_two_sided": 0.05,
+    "family": ["H1", "H2", "H3"],
+    "family_size_fixed": 3,
+    "bootstrap_resamples": 9999,
+    "h1_h2_method": "paired equal-scenario stratified symmetric absolute bootstrap-t over independent streams",
+    "h3_method": "equal-scenario stratified stream-cluster ratio bootstrap-t over joint (A_i,Q_i) components",
+    "resampling_unit": "whole independent stream within scenario; all nested checkpoint components travel together",
+    "zero_null_pvalue": "inclusive absolute pivot: (1 + number(|t_star| >= |t_observed|))/(B+1)",
+    "multiplicity": "Holm over the fixed three-hypothesis family; H3 non-estimability does not recycle alpha",
+    "simultaneous_intervals": "Bonferroni marginal confidence level 0.9833333333333333 using absolute bootstrap-t critical values",
+    "bootstrap_absolute_pivot_critical_order_B9999": "9834th one-based sorted absolute pivot under the frozen A2 tail convention",
+    "known_contrast_support": [-1.0, 1.0],
+    "redraw_degenerate_bootstraps": false,
+    "narrow_support_to_observed_extrema": false,
+    "fallback": "frozen conservative bounded-support reference for original zero-variance/non-estimable cases; infinite critical value yields [-1,1]",
+    "analysis_seed_uint64": {
+      "H1": 1353558527596327882,
+      "H2": 11095830246438979893,
+      "H3": 14964784543515708419
+    },
+    "analysis_seed_address": "DT-C8E1-F09-v1|CONF|ANALYSIS|<hypothesis>|B=9999"
+  },
+  "practical_classification": {
+    "delta": 0.005,
+    "BENEFICIAL": "simultaneous interval lower bound > +0.005",
+    "HARMFUL": "simultaneous interval upper bound < -0.005",
+    "EQUIVALENT": "entire simultaneous interval lies inside [-0.005,+0.005]",
+    "INCONCLUSIVE": "all other interval positions",
+    "non_significance_is_equivalence": false
+  },
+  "material_contract": {
+    "root_excluded": true,
+    "literal_connected_continuity_required": true,
+    "minimum_age_completed_updates": 5,
+    "node_count_range_inclusive": [3, 31],
+    "minimum_recent_reaching_rows": 20,
+    "maximal_eligible_sites_only": true,
+    "site_selection": "uniform addressed random selection among eligible maximal sites from pre-outcome identity only",
+    "same_site_replace_sham": true,
+    "replacement_training": "deterministic CART on past-only revealed recent rows reaching the selected site, bounded by original subtree depth and node count",
+    "sham": "same replacement-candidate construction cost but discard candidate and deploy a fresh-provenance literal copy of the old selected material; deployed semantic tree hash must equal parent",
+    "outside_site_semantics_must_match": true,
+    "no_eligible_is_missing": false,
+    "no_eligible_primary_h3": "ineligible",
+    "no_eligible_h3_itt": "predeclared no-op zero contrast"
+  },
+  "resource_contract": {
+    "primary_budget_axis": "APW deterministic adaptation-work accounting from F02/F05",
+    "h1_h2": "equal total post-fork APW envelope; construction/reinitialisation charged",
+    "h3": "same selected site and same replacement-candidate construction pipeline; independent arm ledgers",
+    "cpu_elapsed_rss_prediction_latency_state_bytes_provenance_bytes": "reported separately and never relabelled as APW",
+    "scientific_timeout": null,
+    "silent_fallback": false,
+    "silent_retry": false
+  },
+  "failure_policy": {
+    "environment_or_version_mismatch": "ENVIRONMENT_INVALID; no scientific record",
+    "source_or_integrity_failure": "INFRASTRUCTURE_INVALID; no scientific record; versioned repair required before rerun",
+    "algorithm_failure_after_valid_start": "retain full planned denominator; remaining prediction slots receive 0-1 loss 1",
+    "treatment_unavailable": "apply the F05 treatment-unavailable full-denominator rule; no fallback treatment",
+    "parent_algorithmic_failure": "does not automatically make RESTART-CART unavailable when valid revealed history still permits a genuine restart",
+    "no_eligible_material": "scientific boundary condition; H3 primary ineligible and H3-ITT no-op zero",
+    "exclude_failed_scientific_unit_from_mean": false
+  },
+  "contextual_comparators": {
+    "role": "contextual predictive benchmark only; not H1-H3 identification and not primary multiplicity",
+    "qualified_methods": ["HAT", "ARF", "EFDT", "SRP", "FROZEN_CART", "ROLLING_CART"],
+    "plastic": "EXCLUDED_FROM_F10_NOT_RUNTIME_QUALIFIED_IN_F07",
+    "ilead_cevot_btad": "literature-only positioning",
+    "streams_per_scenario": 20,
+    "total_streams": 280,
+    "selection": "20 smallest SHA-256 keys per scenario under DT-C8E1-F09-v1|CONF|COMPARATOR-SUBSET|stream=<source_key_hex>",
+    "profiles": "exact F07 constructors; ROLLING_CART window 2000 and refit cadence 100",
+    "seed": "first 32 bits of SHA-256 over DT-C8E1-F09-v1|CONF|COMPARATOR|method=<method>|stream=<source_key_hex>; EFDT explicitly unseeded",
+    "same_source_bytes_as_primary_when_stream_selected": true,
+    "full_stream_prequential_evaluation": true
+  },
+  "secondary_sensitivity": {
+    "500_row_horizon": "available for every primary fork as a prefix of the 2000-row execution",
+    "5000_row_horizon": "only on the frozen 20-per-scenario hash-ranked contextual subset",
+    "random_restart_S1": "only on the same 20-per-scenario subset at both checkpoints; secondary diagnostic, outside primary multiplicity",
+    "adaptive_repair_S2": "NOT_ADMITTED_IN_F10; separate future decision layer, not allowed to alter the frozen material-identification core"
+  },
+  "mechanism_analysis": {
+    "status": "SECONDARY_ASSOCIATIONAL_PRETREATMENT_ONLY",
+    "outcome": "eligible checkpoint MATERIAL-REPLACE minus STRUCTURAL-SHAM 2000-row loss contrast",
+    "cluster": "scenario_x_stream_realisation",
+    "predictors": [
+      "connected_subtree_age_completed_updates",
+      "node_count",
+      "subtree_depth",
+      "recent_window_reach_rate",
+      "past_only_local_error",
+      "past_only_balanced_error",
+      "class_deficiency_indicator",
+      "lineage_depth",
+      "global_champion_literal_retention_fraction",
+      "population_diversity"
+    ],
+    "model": "additive linear model with scenario fixed effects and no interactions",
+    "continuous_scaling": "outcome-blind mean/SD standardisation from CONF predictor values",
+    "zero_variance_predictor": "retain as zero column and mark coefficient non-estimable; do not drop after viewing outcome",
+    "uncertainty": "secondary equal-scenario stream-cluster bootstrap; no causal-mediator interpretation",
+    "future_or_post_treatment_predictors_prohibited": true
+  },
+  "seed_schedule": {
+    "canonical_generator": "working/f09/f09_seed_schedule.py",
+    "expanded_tsv_rows": 4480,
+    "expanded_tsv_sha256": "cb005bc52ca98255c834ccd04eabb14c6ece3ecf96a4e68e7a83f346485b3c93",
+    "expanded_schedule_not_needed_to_generate_values_in_f09": true,
+    "f10_rule": "generate schedule before source materialisation, verify exact SHA-256, persist expanded TSV as execution evidence"
+  },
+  "novelty_firewall": {
+    "refresh": "working/f09/NOVELTY_REFRESH_2026-09-10.md",
+    "f02_x05_triggered": false,
+    "next_required_refresh": "F14 before manuscript consolidation, then F19 before final submission",
+    "global_first_language_prohibited": true
+  },
+  "immutability": {
+    "change_after_any_conf_feature_or_label_value": "requires new protocol version and quarantine of the affected old attempt",
+    "post_outcome_sample_size_change": false,
+    "post_outcome_seed_change": false,
+    "post_outcome_hypothesis_change": false,
+    "post_outcome_delta_change": false,
+    "post_outcome_failure_rule_change": false,
+    "post_outcome_comparator_subset_change": false
+  }
+}

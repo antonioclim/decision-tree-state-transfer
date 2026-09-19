@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "phase": "F10_CONFIRMATORY_CAMPAIGN",
+  "status": "PRECONF_OPERATIONAL_DEFINITIONS_FROZEN",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "conf_feature_or_label_values_generated_before_definition": false,
+  "outcome_informed": false,
+  "scope": "Operational definitions for the F09-frozen secondary pretreatment predictor names; these definitions do not alter H1-H3 or the material intervention.",
+  "predictors": {
+    "connected_subtree_age_completed_updates": "material-v4 selected.age: current parent completedUpdates minus the realised connected-subtree witness update",
+    "node_count": "material-v4 selected.nodes for the selected inherited subtree",
+    "subtree_depth": "material-v4 selected.depth, with a leaf depth of zero",
+    "recent_window_reach_rate": "selected.reaching_rows divided by the 500-row revealed parent fitness window at the checkpoint",
+    "past_only_local_error": "ordinary 0-1 error of the original selected subtree over the revealed recent-window rows that reach that site",
+    "past_only_balanced_error": "mean of class-specific error rates over those same reaching rows when both classes occur; if a class is absent, use ordinary local error and set class_deficiency_indicator=1",
+    "class_deficiency_indicator": "1 exactly when one of the two binary classes is absent from the selected site's revealed reaching rows, otherwise 0",
+    "lineage_depth": "longest parent-edge path of the deployed champion individual in an ancestry registry maintained from learner individual.parents: parentless depth=0, child depth=1+max(parent depths), retained individual depth unchanged",
+    "global_champion_literal_retention_fraction": "fraction of unique node and internal-edge provenance tokens in the current deployed champion that are also present in the champion deployed immediately before the most recent completed parent update; the value computed at that update is carried unchanged until the next parent update",
+    "population_diversity": "1 - sum_h n_h(n_h-1)/(N(N-1)), where h is the semantic tree SHA-256 and n_h its multiplicity in the current N-member population; this is the probability that two distinct uniformly drawn population members have different semantic trees"
+  },
+  "timing": "All predictor values are computed from the parent state and revealed history available at the checkpoint before the checkpoint treatment/update and before any post-checkpoint label is revealed.",
+  "missingness": {
+    "no_eligible_material": "material-site predictors are null and H3 primary eligibility is false; this is a boundary condition, not imputed missing data",
+    "zero_variance_later": "F11 retains the predictor as a zero standardised column and reports the coefficient non-estimable, per F09",
+    "lineage_registry_failure": "INFRASTRUCTURE_INVALID; do not replace with an approximate lineage metric"
+  },
+  "prohibitions": [
+    "no future performance in predictor construction",
+    "no post-treatment quantity in predictor construction",
+    "no outcome-ranked site statistic",
+    "no predictor deletion or redefinition after viewing H3 outcomes",
+    "no causal-mediation language for these secondary associations"
+  ]
+}

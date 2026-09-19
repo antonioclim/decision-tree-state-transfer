@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "phase": "F11_STATISTICS_AND_MECHANISM",
+  "status": "IMPLEMENTATION_BOUND_BEFORE_F11_INFERENTIAL_OUTPUT",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "base_f10_commit": "66cdbdbfb2ad656aa3378433b02d48adffa0cbc3",
+  "primary_input": {
+    "f10_run_id": 34528472017,
+    "artifact_id": 10184027303,
+    "artifact_digest": "sha256:9f67dd5dd0065b8f77bdc4827f098fe2fb4787ca9677fca8edfbd8b552a9c993",
+    "records": 4480,
+    "raw_record_root_sha256": "35f67440cf96cde5bf72dd767aba7a61339b1f375cfdcc04f2e271d38f9387f5",
+    "schedule_sha256": "cb005bc52ca98255c834ccd04eabb14c6ece3ecf96a4e68e7a83f346485b3c93"
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "numpy_bit_generator": "PCG64",
+    "note": "F09 froze the uint64 analysis seeds but not the library seed-expansion algorithm. F11 binds NumPy PCG64 under an exact NumPy version before producing F11 inferential output. This is a computational reproducibility choice only and does not alter any estimand, sample, hypothesis, delta or failure rule."
+  },
+  "primary_bootstrap_t": {
+    "B": 9999,
+    "scenario_order": [
+      "LOCAL_TREE-STATIONARY-NONE",
+      "LOCAL_TREE-ABRUPT-MILD",
+      "LOCAL_TREE-ABRUPT-SEVERE",
+      "LOCAL_TREE-GRADUAL-MILD",
+      "LOCAL_TREE-GRADUAL-SEVERE",
+      "LOCAL_TREE-RECURRENT-MILD",
+      "LOCAL_TREE-RECURRENT-SEVERE",
+      "OBLIQUE-STATIONARY-NONE",
+      "OBLIQUE-ABRUPT-MILD",
+      "OBLIQUE-ABRUPT-SEVERE",
+      "OBLIQUE-GRADUAL-MILD",
+      "OBLIQUE-GRADUAL-SEVERE",
+      "OBLIQUE-RECURRENT-MILD",
+      "OBLIQUE-RECURRENT-SEVERE"
+    ],
+    "resampling": "For every bootstrap replicate and every scenario, sample 320 whole streams with replacement from that scenario. Checkpoint components remain attached to the stream.",
+    "H1_H2_standard_error": "sqrt(sum_s sample_variance_s/(14^2*320)) using the stream-level contrasts in each scenario",
+    "H3_standard_error": "delta-method linearisation: with theta=Abar/Qbar, z_is=A_is-theta*Q_is, SE=sqrt(sum_s sample_variance_s(z)/(14^2*320*Qbar^2))",
+    "observed_pivot": "theta_hat / SE_hat",
+    "bootstrap_pivot": "(theta_star-theta_hat)/SE_star",
+    "degenerate_bootstrap_pivot": "absolute infinity; never redraw or discard",
+    "zero_null_pvalue": "(1 + count(abs(t_star) >= abs(t_observed)))/(9999+1)",
+    "critical_value": "9834th one-based sorted absolute bootstrap pivot",
+    "interval": "theta_hat +/- critical_value*SE_hat, clipped only to the known contrast support [-1,1]",
+    "original_zero_variance_or_nonestimable": "p=1, interval=[-1,1], classification=INCONCLUSIVE",
+    "analysis_seed_uint64": {
+      "H1": 1353558527596327882,
+      "H2": 11095830246438979893,
+      "H3": 14964784543515708419
+    },
+    "holm_family": ["H1", "H2", "H3"],
+    "familywise_alpha": 0.05,
+    "delta": 0.005
+  },
+  "secondary_sensitivity": {
+    "purpose": "Sensitivity/descriptive analyses only; no addition to the H1-H3 multiplicity family.",
+    "B": 9999,
+    "interval": "unadjusted 95% stratified stream-cluster percentile interval using the 250th and 9750th one-based sorted bootstrap estimates",
+    "analyses": [
+      "500-row H1/H2/H3 and H3-ITT on all 4480 streams",
+      "5000-row H1/H2/H3 and H3-ITT on the frozen 280-stream contextual subset",
+      "RANDOM_RESTART S1 contrasts to PERSIST and RESTART-CART on the frozen 280-stream subset",
+      "2000-row balanced-error H1/H2/H3 descriptive contrasts",
+      "H3 eligibility rates by scenario and checkpoint"
+    ],
+    "seed_rule": "first 64 bits of SHA-256 over DT-C8E1-F09-v1|CONF|ANALYSIS|<analysis-name>|B=9999; PCG64 as above"
+  },
+  "mechanism": {
+    "B": 9999,
+    "seed_address": "DT-C8E1-F09-v1|CONF|ANALYSIS|MECHANISM|B=9999",
+    "seed_uint64": 8085499736201925965,
+    "rows": "eligible material checkpoints only",
+    "cluster": "whole scenario x stream realisation",
+    "model": "OLS additive no-interaction model with intercept, 13 scenario fixed-effect indicators and the ten F09 predictors",
+    "reference_scenario": "LOCAL_TREE-STATIONARY-NONE",
+    "continuous_predictors": [
+      "connected_subtree_age_completed_updates",
+      "node_count",
+      "subtree_depth",
+      "recent_window_reach_rate",
+      "past_only_local_error",
+      "past_only_balanced_error",
+      "lineage_depth",
+      "global_champion_literal_retention_fraction",
+      "population_diversity"
+    ],
+    "binary_predictors": ["class_deficiency_indicator"],
+    "standardisation": "Full eligible-CONF predictor mean and sample SD, computed without using the outcome; the same scaling is held fixed in bootstrap resamples.",
+    "zero_variance": "retain as all-zero design column and report the coefficient non-estimable",
+    "bootstrap": "Within every scenario resample 320 whole stream clusters with replacement; all eligible checkpoints from a selected stream travel together.",
+    "bootstrap_rank_rule": "Never redraw a bootstrap replicate. If a predictor has exactly zero within-scenario design variation in a replicate, retain its conceptual zero column and mark that coefficient non-estimable for that replicate; estimate the other active predictor columns. If any predictor has fewer than all 9999 finite bootstrap coefficients, report its percentile interval as NOT_ESTIMABLE and report its finite-replicate fraction. This rule is triggered from predictor support only and never from outcome values.",
+    "uncertainty": "unadjusted secondary 95% percentile intervals, 250th and 9750th one-based sorted coefficients when all 9999 coefficients are finite; no mechanism p-values and no causal-mediation language"
+  },
+  "firewalls": {
+    "no_post_outcome_change_to_f09": true,
+    "contextual_comparators_not_in_h1_h2_h3": true,
+    "f12_not_started": true,
+    "manuscript_not_modified": true
+  }
+}

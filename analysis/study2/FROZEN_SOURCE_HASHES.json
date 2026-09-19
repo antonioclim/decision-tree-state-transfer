@@ -1,0 +1,55 @@
+{
+  "files": {
+    "DRAW_SCHEDULE_SEALS.json": {
+      "bytes": 1271,
+      "sha256": "56d22703f850e8680ba517cbd786a3a89f6aaa20d0b62e637327b47683f1a0f0"
+    },
+    "METHODS_AND_IMPLEMENTATION_RESOLUTIONS_EN.md": {
+      "bytes": 8090,
+      "sha256": "e3bd6877ece4fee515d64245512888ad87495b146838afe1c3aad037d3b96ec6"
+    },
+    "NUMERICAL_IMPLEMENTATION_RESOLUTION.json": {
+      "bytes": 3563,
+      "sha256": "c24bd2a36a99c872803929fcfe8e7e0858887bcc23b22e5701882745ab4831e6"
+    },
+    "README_ANALYSIS_EN.md": {
+      "bytes": 5504,
+      "sha256": "ee16d7948918bdbe962749688fb19cd96367088d5231eb284b3b991fcd3f4bc1"
+    },
+    "analyse.py": {
+      "bytes": 8916,
+      "sha256": "c8da880aac49d95652ee125def0f87c72e24c7b0aaa1477fb90c2a5cc9e0d3f9"
+    },
+    "qualify_analysis.py": {
+      "bytes": 8175,
+      "sha256": "c4b654c3c9c28c8a7b705f3b064752ae9eee05cc16106878c0da9b5df968df9c"
+    },
+    "reporting.py": {
+      "bytes": 6198,
+      "sha256": "5f7f5faa905052710dce8885a1e247d0db6b8e99a11123b16c8e6a6870c00acb"
+    },
+    "reproduce_frozen.mjs": {
+      "bytes": 6448,
+      "sha256": "b7245ed6858f1a4ed9fe398d282b89d9efe3891ec653d0078b397f9865f4e24b"
+    },
+    "requirements-analysis.txt": {
+      "bytes": 13,
+      "sha256": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7"
+    },
+    "statistics_core.py": {
+      "bytes": 11306,
+      "sha256": "4e81bc3383630d5a77aa24b7291334c6af1174f22a0ddd0a996df4ad3a5bcc68"
+    }
+  },
+  "public_adapter": {
+    "derived_from": "reproduce_frozen.mjs",
+    "file": "reproduce_public.mjs",
+    "permitted_changes": [
+      "resolve the publication-safe protocol derivative from protocols/study2",
+      "verify the derivative binding to the original protocol SHA-256"
+    ],
+    "scientific_algorithm_changed": false
+  },
+  "schema_version": 1,
+  "status": "FROZEN_SOURCE_SNAPSHOT_WITH_SEPARATE_PUBLIC_ADAPTER"
+}

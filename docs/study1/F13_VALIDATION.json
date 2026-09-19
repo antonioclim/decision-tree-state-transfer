@@ -1,0 +1,122 @@
+{
+  "f14_started": false,
+  "figures": {
+    "Figure_1_primary_effects.odg": {
+      "embedded_images": 0,
+      "native_draw_object_count": 42,
+      "sha256": "1f7fb73b9364866c8647139b525a5f401cff1f8e27752c1e8968f52aeb774d0f"
+    },
+    "Figure_1_primary_effects.pdf": {
+      "sha256": "c185e75a73be8fbbcdbe42becf5bf2a478655e2e7c2e7263df3d37bb05cec686"
+    },
+    "Figure_1_primary_effects.svg": {
+      "sha256": "fabf6c9531f00af8af2d83d3c41d58dc5f44dcee065f6e3118afb8dea84908ee",
+      "vector_only": true
+    },
+    "Figure_2_mechanism_coefficients.odg": {
+      "embedded_images": 0,
+      "native_draw_object_count": 49,
+      "sha256": "74ce05f3877a65db6c8700e06294d933c73f6fde65f4ab11e75d3e1567b048a6"
+    },
+    "Figure_2_mechanism_coefficients.pdf": {
+      "sha256": "ba9d063f02db8dcfcf300e969a1ecf623a6516893069b459f48bb029d7163819"
+    },
+    "Figure_2_mechanism_coefficients.svg": {
+      "sha256": "2bde02510c79b033038403310cc266b8aa64979a622d83b817fe39823c81fd55",
+      "vector_only": true
+    },
+    "Figure_3_contextual_pareto.odg": {
+      "embedded_images": 0,
+      "native_draw_object_count": 44,
+      "sha256": "ed5a1ba953c9ad054044211a79c0adcff7a669875869e99d55744a0b2786ea25"
+    },
+    "Figure_3_contextual_pareto.pdf": {
+      "sha256": "a0dd88ae1b0fd76dd32aff35b63dbb967c138ffc8f31e9faab3fd24e6e6aba8b"
+    },
+    "Figure_3_contextual_pareto.svg": {
+      "sha256": "cea9e54a5a846376049b6b739e58f935fe90160d82dd6cb66fb3f85bb5a9f8af",
+      "vector_only": true
+    },
+    "Figure_4_internal_decision_plane.odg": {
+      "embedded_images": 0,
+      "native_draw_object_count": 33,
+      "sha256": "e8593a588258c2901df67bdf1e03bed6f7f25098a52b0f8ed7c849d4dc4a4a9c"
+    },
+    "Figure_4_internal_decision_plane.pdf": {
+      "sha256": "6738e2f0c3a43061e1ce752657c7f4d14cae0bf257068fd53503b3967392158e"
+    },
+    "Figure_4_internal_decision_plane.svg": {
+      "sha256": "e5f6d431ffea0d5978d235b980f71a2a977f1a49811063fb54cef25f611268fe",
+      "vector_only": true
+    },
+    "Figure_S1_scenario_descriptives.odg": {
+      "embedded_images": 0,
+      "native_draw_object_count": 72,
+      "sha256": "60d1cc809b8ec99a835e5375cf901d414062bee07f2ba16ae4d38f35d1c2f1fc"
+    },
+    "Figure_S1_scenario_descriptives.pdf": {
+      "sha256": "6efdceae6e4ac3a92911e4ed94279ec3c3e8f6a7f9becdc11df4166600ae0c04"
+    },
+    "Figure_S1_scenario_descriptives.svg": {
+      "sha256": "8d8115f9bc1e42dd6b490e005511e23ab36a2e1e836dcf219e4a5dec176a2640",
+      "vector_only": true
+    },
+    "Figure_S2_h3_eligibility.odg": {
+      "embedded_images": 0,
+      "native_draw_object_count": 76,
+      "sha256": "2dca353b40a8cc24a064162d5107bb4b0e37180067207abafec5471a23801141"
+    },
+    "Figure_S2_h3_eligibility.pdf": {
+      "sha256": "77ad9e27115c4098927c340cbc5a223a53e7f3ea6fe31de22f687e6a4a4e0bdc"
+    },
+    "Figure_S2_h3_eligibility.svg": {
+      "sha256": "f23067f432925cc429b9d25f436a10b3685fcce80315bd14597922e20e2cecc1",
+      "vector_only": true
+    }
+  },
+  "main_figures": 4,
+  "main_tables": 3,
+  "manuscript_modified": false,
+  "phase": "F13_TABLES_AND_FIGURES",
+  "schema_version": 1,
+  "source_hashes": {
+    "CONTEXTUAL_BREAK_EVEN.tsv": "39e76945cda854c6c4e9f237f390838c4992ac46e113a03f9c32a6f2b05b06ac",
+    "CONTEXTUAL_METHOD_SUMMARY.tsv": "0773449e5cb4f6f3b4c8bb65de6d0ab4b111ce10e6ef4bf6b97ed5e1564f9896",
+    "F12_DECISION_ECONOMICS.json": "9912f5795a9d70bd520747fa6d758c98675ba14f3df80275b0b62562ee5e582e",
+    "INTERNAL_STATE_RESOURCE.tsv": "fcbf1a0f348c33895d0ad48899be8a8ec4f65e7aeb2f046acd3fa548c91199f2",
+    "MATERIAL_RESOURCE.tsv": "82a436cdfaadb93ca19574fd2881f5a773f2970d5981eb97e70e963a89300e93",
+    "MECHANISM_MODEL.json": "e3300c1959d821c84eac1ebc76f98bd4bd7952229541dbff69c4c879f3124644",
+    "PRIMARY_BY_SCENARIO.tsv": "efc1cceb54ae87e41ac4b37fc6bd550a5215c8738cbb3c29478da6d5cf5bcf12",
+    "PRIMARY_INFERENCE.json": "48d1137ac5e984b26ac549d9b826ea458eb2993638319bcd1bad9fd256636c6e",
+    "SECONDARY_SENSITIVITY.json": "fff7c66d825d0dba848bb95563e0a8ac3e58a31e5333902b7dd468dbdfeb5023"
+  },
+  "status": "PASS_NATIVE_EDITABLE_FIGURES_AND_SOURCE_LOCK",
+  "supplementary_figures": 2,
+  "supplementary_tables": 3,
+  "tables": {
+    "Table_1_primary_confirmatory_results.tsv": {
+      "rows": 3,
+      "sha256": "c2a268baa2a8fc5c4534dc917d5b6f150d56e5937edb526c59e878333ca0d1bb"
+    },
+    "Table_2_internal_decision_economics.tsv": {
+      "rows": 4,
+      "sha256": "866b2a91347f49362aebe38ee1767e8af3121e99fe852b0fccb56ff0ae050f97"
+    },
+    "Table_3_contextual_comparators.tsv": {
+      "rows": 6,
+      "sha256": "1166284505ef558509262cba0a78c1e210956f1b064950fa618035a490590878"
+    },
+    "Table_S1_horizon_sensitivity.tsv": {
+      "rows": 9,
+      "sha256": "932aba48fabf8656a25d3defa15ea214a471c59a22c8a6734ddfce085cfbe5d0"
+    },
+    "Table_S2_mechanism_coefficients.tsv": {
+      "rows": 10,
+      "sha256": "532848dd283236a18db20bc2020129222ebd54c9e8cd0a2a88ec2d084bcf9a5b"
+    },
+    "Table_S3_scenario_descriptives.tsv": {
+      "rows": 14,
+      "sha256": "7d80000c920aa76a27335d08dc295a698ea52b46331d2ab355accec7e49a439a"
+    }
+  }
+}

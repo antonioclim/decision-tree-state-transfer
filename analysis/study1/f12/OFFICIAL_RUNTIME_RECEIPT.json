@@ -1,0 +1,17 @@
+{
+  "decision_economics_sha256": "9912f5795a9d70bd520747fa6d758c98675ba14f3df80275b0b62562ee5e582e",
+  "deterministic_double_execution_identical": true,
+  "execution_commit": "b78651a19f741e411f622387848d84a885765f92",
+  "f10_contextual_artifact_id": 10185176630,
+  "f10_primary_artifact_id": 10184027303,
+  "f11_official_artifact_id": 10187734096,
+  "f13_started": false,
+  "github_run_id": 34572594012,
+  "independent_validator_passed": true,
+  "manuscript_modified": false,
+  "numpy": "2.5.3",
+  "phase": "F12_DECISION_ECONOMICS",
+  "python": "3.12.13",
+  "schema_version": 1,
+  "status": "OFFICIAL_F12_RUNTIME_VALIDATED"
+}

@@ -1,0 +1,56 @@
+{
+  "binary_support": {
+    "class_deficiency_indicator_ones": 1,
+    "rows": 8618
+  },
+  "bootstrap_resamples": 9999,
+  "bootstrap_seed_uint64": 8085499736201925965,
+  "design_columns": 24,
+  "eligible_checkpoint_rows": 8618,
+  "intercept": 0.03041288252011055,
+  "interpretation": "Associational effect-modification model only; positive outcome/coefficient direction means larger replace-minus-sham loss contrast, hence greater observed advantage of retaining selected inherited material. No causal-mediation interpretation.",
+  "model_rank": 24,
+  "predictor_coefficients": [
+    {"ci95_percentile": [-0.0005608359329051211, 0.0013050805250845018], "coefficient": 0.00038359263888404184, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "connected_subtree_age_completed_updates", "standardised": true},
+    {"ci95_percentile": [-0.007236884361629471, -0.004765894469831459], "coefficient": -0.006007993073707001, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "node_count", "standardised": true},
+    {"ci95_percentile": [0.0019414541761503903, 0.004464688008791617], "coefficient": 0.003196672064582526, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "subtree_depth", "standardised": true},
+    {"ci95_percentile": [0.012668238273255597, 0.01493371367581095], "coefficient": 0.013806030252634766, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "recent_window_reach_rate", "standardised": true},
+    {"ci95_percentile": [0.002144930775559192, 0.003589650915332334], "coefficient": 0.002863534509300807, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "past_only_local_error", "standardised": true},
+    {"ci95_percentile": [-0.0009095804771632994, 0.00047328937728795115], "coefficient": -0.00022374932559834926, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "past_only_balanced_error", "standardised": true},
+    {"ci95_percentile": [null, null], "coefficient": -0.004427564958270918, "finite_bootstrap_coefficients": 6319, "finite_fraction": 0.6319631963196319, "interval_status": "NOT_ESTIMABLE_BOOTSTRAP_DEGENERACY", "predictor": "class_deficiency_indicator", "standardised": false},
+    {"ci95_percentile": [-0.00392149672922648, -0.002645769873497039], "coefficient": -0.003284089042231904, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "lineage_depth", "standardised": true},
+    {"ci95_percentile": [-0.00037506406461532165, 0.0009745507839945212], "coefficient": 0.0003027632029418606, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "global_champion_literal_retention_fraction", "standardised": true},
+    {"ci95_percentile": [-0.004175709581444881, -0.00098992822910146], "coefficient": -0.0025748582337835986, "finite_bootstrap_coefficients": 9999, "finite_fraction": 1.0, "interval_status": "ESTIMABLE", "predictor": "population_diversity", "standardised": true}
+  ],
+  "predictor_scaling": {
+    "connected_subtree_age_completed_updates": {"mean": 31.462752378742167, "sample_sd": 28.58227709922781},
+    "global_champion_literal_retention_fraction": {"mean": 0.7098285420706824, "sample_sd": 0.2713403292184513},
+    "lineage_depth": {"mean": 88.04595033650499, "sample_sd": 59.087775262948824},
+    "node_count": {"mean": 6.18171269436064, "sample_sd": 3.704493536148097},
+    "past_only_balanced_error": {"mean": 0.23512938444743364, "sample_sd": 0.10863107239453058},
+    "past_only_local_error": {"mean": 0.18525374993215504, "sample_sd": 0.09390736747008038},
+    "population_diversity": {"mean": 0.7568887137529638, "sample_sd": 0.27438419725997115},
+    "recent_window_reach_rate": {"mean": 0.3412100255279647, "sample_sd": 0.18414142969832825},
+    "subtree_depth": {"mean": 2.291250870271525, "sample_sd": 1.1829785950000145}
+  },
+  "reference_scenario": "LOCAL_TREE-STATIONARY-NONE",
+  "scenario_fixed_effects": [
+    {"coefficient_vs_reference": 0.0, "reference": true, "scenario_id": "LOCAL_TREE-STATIONARY-NONE"},
+    {"coefficient_vs_reference": -0.012109803970717085, "reference": false, "scenario_id": "LOCAL_TREE-ABRUPT-MILD"},
+    {"coefficient_vs_reference": -0.014229696378675707, "reference": false, "scenario_id": "LOCAL_TREE-ABRUPT-SEVERE"},
+    {"coefficient_vs_reference": -0.010574447928263266, "reference": false, "scenario_id": "LOCAL_TREE-GRADUAL-MILD"},
+    {"coefficient_vs_reference": -0.010969894040451738, "reference": false, "scenario_id": "LOCAL_TREE-GRADUAL-SEVERE"},
+    {"coefficient_vs_reference": -0.010322497068677449, "reference": false, "scenario_id": "LOCAL_TREE-RECURRENT-MILD"},
+    {"coefficient_vs_reference": -0.01567492382817025, "reference": false, "scenario_id": "LOCAL_TREE-RECURRENT-SEVERE"},
+    {"coefficient_vs_reference": -0.009546101336982837, "reference": false, "scenario_id": "OBLIQUE-STATIONARY-NONE"},
+    {"coefficient_vs_reference": -0.012137098197889858, "reference": false, "scenario_id": "OBLIQUE-ABRUPT-MILD"},
+    {"coefficient_vs_reference": -0.017787951209476717, "reference": false, "scenario_id": "OBLIQUE-ABRUPT-SEVERE"},
+    {"coefficient_vs_reference": -0.010416728327708742, "reference": false, "scenario_id": "OBLIQUE-GRADUAL-MILD"},
+    {"coefficient_vs_reference": -0.014652667925191853, "reference": false, "scenario_id": "OBLIQUE-GRADUAL-SEVERE"},
+    {"coefficient_vs_reference": -0.008920870611084382, "reference": false, "scenario_id": "OBLIQUE-RECURRENT-MILD"},
+    {"coefficient_vs_reference": -0.013271533190559657, "reference": false, "scenario_id": "OBLIQUE-RECURRENT-SEVERE"}
+  ],
+  "schema_version": 1,
+  "status": "SECONDARY_ASSOCIATIONAL_PRETREATMENT_ONLY",
+  "unique_stream_clusters": 4477
+}

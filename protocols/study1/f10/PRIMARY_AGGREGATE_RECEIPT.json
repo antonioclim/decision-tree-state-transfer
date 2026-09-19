@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "phase": "F10_CONFIRMATORY_CAMPAIGN",
+  "component": "PRIMARY_RAW_CONF",
+  "status": "COMPLETE_AND_INTEGRITY_VALIDATED",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "aggregate_run_id": 34528472017,
+  "aggregate_execution_commit": "d5df46c7ecc784c1cc1381424a6be8ba31faefe4",
+  "aggregate_artifact_id": 10184027303,
+  "aggregate_artifact_name": "f10-primary-recovery02-aggregate-d5df46c7ecc784c1cc1381424a6be8ba31faefe4",
+  "aggregate_artifact_digest": "sha256:9f67dd5dd0065b8f77bdc4827f098fe2fb4787ca9677fca8edfbd8b552a9c993",
+  "records": 4480,
+  "unique_source_keys": 4480,
+  "scenarios": 14,
+  "n_per_scenario": 320,
+  "schedule_sha256": "cb005bc52ca98255c834ccd04eabb14c6ece3ecf96a4e68e7a83f346485b3c93",
+  "raw_record_root_sha256": "35f67440cf96cde5bf72dd767aba7a61339b1f375cfdcc04f2e271d38f9387f5",
+  "source_digest_root_sha256": "f0e9a072f67156978cb576f3aec5e81fda817b0c41d1bdc3505fe3f9e258cc56",
+  "contextual_source_digest_rows": 280,
+  "contextual_source_digest_tsv_sha256": "aca2abe9d241fbedcbde15ceb161f1d2cd23417e92c314fc60df7ff935bce73a",
+  "independent_local_validation": {
+    "zip_entries": 4484,
+    "raw_record_index_rows": 4480,
+    "record_files": 4480,
+    "file_sha256_errors": 0,
+    "record_self_hash_errors": 0,
+    "contextual_bridge_rows": 280,
+    "contextual_bridge_unique_source_keys": 280
+  },
+  "recovery_history": {
+    "original_run": 34467810650,
+    "recovery_01_run": 34495511330,
+    "recovery_02_run": 34528472017,
+    "recovery_semantics": "Only absent planned records were recomputed after deep validation of already retained content-addressed records; no validated raw record was overwritten or recomputed."
+  },
+  "contains_h1_h2_h3_outcome_summary": false,
+  "scientific_interpretation_authorised": false,
+  "f11_authorised": false
+}

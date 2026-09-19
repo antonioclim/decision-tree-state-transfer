@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "phase": "F10_CONFIRMATORY_CAMPAIGN",
+  "status": "COMPACT_PROVENANCE_SELECTED_BEFORE_CONF",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "conf_feature_or_label_values_generated_before_decision": false,
+  "selected_implementation": "assets/code/confirmatory/f10-compact-provenance.mjs::CompactProvenanceIndex",
+  "qualification": {
+    "disk_reference_run_id": 34461919231,
+    "disk_reference_elapsed_ns": 128367207555,
+    "disk_reference_database_bytes": 3554996224,
+    "compact_equivalence_run_id": 34462541009,
+    "compact_elapsed_ns": 89256128944,
+    "compact_event_count": 2265699,
+    "exact_disk_reference_match_at_checkpoints": [10000, 20000],
+    "same_snapshot_identity": true,
+    "same_material_eligibility": true,
+    "same_selected_site": true,
+    "same_candidate_apw": true,
+    "same_replace_sham_apw": true
+  },
+  "rejected_optimisation": {
+    "implementation": "assets/code/confirmatory/f10-deployed-provenance.mjs::DeployedProvenanceIndex",
+    "run_ids": [34464300725, 34464601986],
+    "status": "NOT_ADMITTED_FOR_F10",
+    "reason": "The more aggressive scratch-pruning verifier failed pre-CONF equivalence because a deployed edge can retain a source reference whose historical scratch edge is not retained. No CONF source value was generated in either failed gate.",
+    "further_retry_in_f10": false
+  },
+  "scientific_design_changed": false,
+  "eligibility_definition_changed": false,
+  "learner_changed": false,
+  "material_v4_changed": false,
+  "apw_changed": false,
+  "rng_changed": false,
+  "outcome_informed": false
+}

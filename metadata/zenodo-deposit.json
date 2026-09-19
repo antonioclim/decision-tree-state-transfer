@@ -1,0 +1,36 @@
+{
+  "creators": [
+    {
+      "name": "Toma, Andrei",
+      "affiliation": "Bucharest University of Economic Studies"
+    },
+    {
+      "name": "Clim, Antonio",
+      "affiliation": "Bucharest University of Economic Studies",
+      "orcid": "0000-0003-4745-0431"
+    }
+  ],
+  "title": "State-transfer interventions in adaptive decision-tree populations under concept drift: companion software and evidence",
+  "version": "1.0.0",
+  "access_right": "open",
+  "description": "Companion software, locked protocols, analysis-ready data and reproducibility evidence for two confirmatory studies of state-transfer interventions in adaptive decision-tree populations under concept drift. The deposit uses a file-level multi-licence: original software and validation code are distributed under PolyForm Noncommercial 1.0.0, while original protocols, documentation and generated evidence are distributed under CC BY-NC 4.0. See LICENSE-POLICY.md and licensing/licence-map.json in the archive.",
+  "keywords": [
+    "concept drift",
+    "data streams",
+    "decision trees",
+    "state transfer",
+    "reproducibility",
+    "resource trade-offs"
+  ],
+  "publication_date": "2026-09-19",
+  "upload_type": "software",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/antonioclim/decision-tree-state-transfer/releases/tag/v1.0.0",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "File-level licences govern the contents. No single blanket licence applies to the complete archive."
+}

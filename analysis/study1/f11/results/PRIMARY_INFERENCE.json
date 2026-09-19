@@ -1,0 +1,56 @@
+{
+  "bootstrap_resamples": 9999,
+  "delta": 0.005,
+  "familywise_alpha": 0.05,
+  "phase": "F11_STATISTICS_AND_MECHANISM",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "results": {
+    "H1": {
+      "ci": [
+        0.005535671179111423,
+        0.006471025249460006
+      ],
+      "critical_abs_t": 2.375920002168423,
+      "degenerate_resamples": 0,
+      "estimate": 0.0060033482142857145,
+      "holm_reject_fwer_0_05": true,
+      "p_holm_adjusted": 0.00030000000000000003,
+      "p_unadjusted": 0.0001,
+      "practical_classification": "BENEFICIAL",
+      "se": 0.0001968403964558814,
+      "t_observed": 30.498557828455034
+    },
+    "H2": {
+      "ci": [
+        -0.0005081512576068343,
+        0.00017857536474969113
+      ],
+      "critical_abs_t": 2.4117939342823598,
+      "degenerate_resamples": 0,
+      "estimate": -0.00016478794642857156,
+      "holm_reject_fwer_0_05": false,
+      "p_holm_adjusted": 0.2504,
+      "p_unadjusted": 0.2504,
+      "practical_classification": "EQUIVALENT",
+      "se": 0.00014236842803920228,
+      "t_observed": -1.1574753524931516
+    },
+    "H3": {
+      "ci": [
+        0.018119854559468226,
+        0.01977083933702748
+      ],
+      "critical_abs_t": 2.38361246638906,
+      "degenerate_resamples": 0,
+      "estimate": 0.018945346948247854,
+      "holm_reject_fwer_0_05": true,
+      "observed_denominator": 0.9618303571428573,
+      "p_holm_adjusted": 0.00030000000000000003,
+      "p_unadjusted": 0.0001,
+      "practical_classification": "BENEFICIAL",
+      "se": 0.00034631988228781463,
+      "t_observed": 54.70476261164533
+    }
+  },
+  "schema_version": 1
+}

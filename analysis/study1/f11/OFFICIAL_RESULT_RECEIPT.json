@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "phase": "F11_STATISTICS_AND_MECHANISM",
+  "status": "OFFICIAL_F11_ANALYSIS_VALIDATED",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "execution_commit": "6442e5601444a5a3fee95c4c9483d1fe241d04de",
+  "github_run_id": 34570897318,
+  "github_run_conclusion": "success",
+  "artifact_id": 10187734096,
+  "artifact_digest": "sha256:b034323b417808f179373289c2f11b6fc7d293e400d0e7f5037dd9a28b3d6ea7",
+  "f10_primary_artifact_id": 10184027303,
+  "f10_primary_artifact_digest": "sha256:9f67dd5dd0065b8f77bdc4827f098fe2fb4787ca9677fca8edfbd8b552a9c993",
+  "runtime": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "numpy_bit_generator": "PCG64"
+  },
+  "validation": {
+    "f10_records_reverified": 4480,
+    "unique_source_keys": 4480,
+    "unit_tests_passed": 7,
+    "unit_tests_failed": 0,
+    "double_execution_byte_identical": true,
+    "independent_result_validator_passed": true,
+    "primary_degenerate_bootstrap_resamples": 0
+  },
+  "hashes": {
+    "primary_inference_sha256": "48d1137ac5e984b26ac549d9b826ea458eb2993638319bcd1bad9fd256636c6e",
+    "primary_bootstrap_sha256": "2842429183fdd4d21d50e74342eed7f5dfb24fa5a1034a9cf6a35a44f8295735",
+    "secondary_sensitivity_sha256": "fff7c66d825d0dba848bb95563e0a8ac3e58a31e5333902b7dd468dbdfeb5023",
+    "mechanism_model_sha256": "e3300c1959d821c84eac1ebc76f98bd4bd7952229541dbff69c4c879f3124644",
+    "stream_estimators_sha256": "4cbf28aa88da80de2b1ec9704cb8644d929f4169f00793a5380604d502e301c4"
+  },
+  "primary_results": {
+    "H1": {"estimate": 0.0060033482142857145, "simultaneous_ci": [0.005535671179111423, 0.006471025249460006], "p_unadjusted": 0.0001, "p_holm_adjusted": 0.00030000000000000003, "holm_reject": true, "classification": "BENEFICIAL"},
+    "H2": {"estimate": -0.00016478794642857156, "simultaneous_ci": [-0.0005081512576068343, 0.00017857536474969113], "p_unadjusted": 0.2504, "p_holm_adjusted": 0.2504, "holm_reject": false, "classification": "EQUIVALENT"},
+    "H3": {"estimate": 0.018945346948247854, "simultaneous_ci": [0.018119854559468226, 0.01977083933702748], "p_unadjusted": 0.0001, "p_holm_adjusted": 0.00030000000000000003, "holm_reject": true, "classification": "BENEFICIAL", "observed_eligibility_denominator": 0.9618303571428573}
+  },
+  "secondary_key_results": {
+    "H1_500": {"estimate": 0.009765848214285716, "ci95": [0.009278125, 0.01026004464285714]},
+    "H1_5000": {"estimate": 0.0036564285714285696, "ci95": [0.0022121428571428557, 0.005079642857142855]},
+    "H2_500": {"estimate": 0.0002553571428571431, "ci95": [-0.000038169642857142404, 0.0005566964285714289]},
+    "H2_5000": {"estimate": -0.00031428571428571557, "ci95": [-0.0014171428571428588, 0.0007935714285714283]},
+    "H3_500": {"estimate": 0.01981573450916686, "ci95": [0.01909601764774179, 0.020533828478588836]},
+    "H3_5000": {"estimate": 0.019267790262172287, "ci95": [0.016701333333333335, 0.021900000000000006]},
+    "H3_ITT_2000": {"estimate": 0.018222209821428574, "ci95": [0.01758794642857143, 0.018888002232142858]},
+    "eligibility": {"eligible_checkpoints": 8618, "total_checkpoints": 8960, "rate": 0.9618303571428571},
+    "random_restart_minus_persist_2000": {"estimate": 0.07274285714285715, "ci95": [0.07038660714285715, 0.07512053571428572]},
+    "random_restart_minus_restart_cart_2000": {"estimate": 0.06653928571428572, "ci95": [0.06430892857142857, 0.0686875]}
+  },
+  "mechanism": {
+    "eligible_checkpoint_rows": 8618,
+    "unique_stream_clusters": 4477,
+    "model_rank": 24,
+    "design_columns": 24,
+    "class_deficiency_indicator_ones": 1,
+    "class_deficiency_interval_status": "NOT_ESTIMABLE_BOOTSTRAP_DEGENERACY",
+    "interpretation": "secondary associational effect-modification only; no causal-mediation interpretation"
+  },
+  "f12_started": false,
+  "manuscript_modified": false
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "phase": "F09_IMMUTABLE_CONF_PROTOCOL_LOCK",
+  "status": "ADOPTED_BEFORE_CONF_VALUES",
+  "protocol_namespace": "DT-C8E1-F09-v1",
+  "n_per_scenario": 320,
+  "scenario_count": 14,
+  "independent_units_total": 4480,
+  "independent_unit": "scenario_x_stream_realisation",
+  "rows_are_replicates": false,
+  "checkpoints_are_replicates": false,
+  "optimizer_reruns_are_replicates": false,
+  "optimizer_keys_per_independent_stream": 1,
+  "optimizer_randomness_interpretation": "part of the joint stream-level randomisation distribution; treatment-specific addressed namespaces derive from the one stream optimiser base key",
+  "practical_threshold_delta": 0.005,
+  "historical_precision_evidence": {
+    "source": "DECISION_TREE_PHASE10C_PRECISION_PLANNING.json",
+    "plan_sha256": "94152ad85e70580215608fdf52d74d878b957e23a8e71d9d535ecb609e98f1fb",
+    "predeclared_grid": [20, 80, 320],
+    "planning_screen": {
+      "all_three_interval_width_at_most": 0.01,
+      "required_fraction_of_families": 0.9,
+      "full_support_interval_fraction_at_most": 0.01,
+      "profiles": ["SYMMETRIC", "SKEWED", "SKEWED_MIRROR", "SPARSE", "HETEROGENEOUS_CORRELATED"]
+    },
+    "n20_passed_all_profiles": false,
+    "n80_passed_all_profiles": false,
+    "n320_passed_all_profiles": true,
+    "historical_status_was_candidate_only": true,
+    "not_power_guarantee": true
+  },
+  "decision_rationale": [
+    "F02 requires delta=0.005 to be scientifically usable for benefit/harm/equivalence classification.",
+    "320 is the smallest sample size in the already predeclared historical precision grid that passed the stated screen in all five analytical stress profiles.",
+    "F09 deliberately does not introduce a new intermediate sample-size grid after the 80/320 bracket is already known.",
+    "One optimiser key per independent stream avoids spending a threefold multiplier on nested pseudo-replication while still integrating optimiser randomness into the independent stream distribution."
+  ],
+  "conf_feature_or_label_values_generated_for_decision": false,
+  "outcome_informed_change": false,
+  "change_after_conf_requires_new_protocol_version": true
+}

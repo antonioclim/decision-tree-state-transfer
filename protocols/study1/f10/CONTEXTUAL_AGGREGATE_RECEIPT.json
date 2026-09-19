@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "phase": "F10_CONTEXTUAL_COMPARATORS",
+  "status": "PASS_COMPLETE_CONTEXTUAL_AGGREGATE",
+  "protocol_id": "DT-C8E1-F09-v1.0",
+  "workflow_run_id": 34560821717,
+  "workflow_execution_commit": "d148ac238bca25a612caf2ad5f4bc0e2fd3c5fb3",
+  "workflow_conclusion": "success",
+  "aggregate_artifact": {
+    "artifact_id": 10185176630,
+    "name": "f10-contextual-aggregate-d148ac238bca25a612caf2ad5f4bc0e2fd3c5fb3",
+    "github_artifact_digest": "sha256:12f70fe4da1c5704b02d320a61cdea4a82f8064e936f478f5ee3256043c5e7a1",
+    "size_in_bytes": 802290
+  },
+  "independent_post_run_verification": {
+    "cells": 1680,
+    "unique_stream_method_pairs": 1680,
+    "unique_streams": 280,
+    "cells_per_stream": 6,
+    "methods": {
+      "HAT": 280,
+      "ARF": 280,
+      "EFDT": 280,
+      "SRP": 280,
+      "FROZEN_CART": 280,
+      "ROLLING_CART": 280
+    },
+    "status_counts": {
+      "COMPLETE": 1680
+    },
+    "self_hash_errors": 0,
+    "source_digest_bridge_errors": 0,
+    "prediction_calls_per_cell": 24000,
+    "labels_consumed_per_cell": 26000,
+    "update_or_fit_call_distributions": {
+      "HAT": {"26000": 280},
+      "ARF": {"26000": 280},
+      "EFDT": {"26000": 280},
+      "SRP": {"26000": 280},
+      "FROZEN_CART": {"1": 280},
+      "ROLLING_CART": {"241": 280}
+    },
+    "maximum_peak_rss_bytes": 328708096,
+    "runtime_identity": {
+      "python": "3.12.13",
+      "pip": "25.0.1",
+      "river": "0.26.1",
+      "scikit_learn": "1.9.0",
+      "python_lock_sha256": "6448a068c0e696e42581fcba0597c7eb14ad9d2fde07fa115c91109c1aba90f3"
+    },
+    "schedule_sha256": "cb005bc52ca98255c834ccd04eabb14c6ece3ecf96a4e68e7a83f346485b3c93",
+    "source_bridge_sha256": "aca2abe9d241fbedcbde15ceb161f1d2cd23417e92c314fc60df7ff935bce73a",
+    "source_bridge_byte_identical_to_primary_aggregate": true,
+    "expanded_schedule_byte_identical_to_primary_aggregate": true,
+    "cell_record_root_sha256_recomputed": "f4003ea670b0f3cca491b982b33faddee113482f14388b856d270b8473a58ecf",
+    "cell_record_root_matches_campaign_manifest": true
+  },
+  "firewalls": {
+    "role": "CONTEXTUAL_PREDICTIVE_RESOURCE_BENCHMARK_ONLY",
+    "h1_h2_h3_identification": false,
+    "scientific_interpretation_authorised_in_f10": false,
+    "predictive_ranking_summary_in_f10": false,
+    "f11_started": false
+  }
+}

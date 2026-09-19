@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "phase": "F07_DEV_DESIGN",
+  "status": "DESIGN_FROZEN_NO_DEV_RESULTS",
+  "base_f06_commit": "59946d5cf581485b5186026836ce2f27d8457fa7",
+  "confirmation_authorised": false,
+  "scientific_admission": false,
+  "purpose": "Freeze development-only comparator execution choices before any F08 pilot and preserve the F02 causal estimand firewall.",
+  "source_binding": {
+    "protocol_id": "DT-C8E1-P9-v1.0",
+    "partition": "DEV",
+    "scenario_count": 14,
+    "realisations_per_scenario": 3,
+    "observations_per_stream": 26000,
+    "initialisation_rows": 2000,
+    "checkpoints": [10000, 20000],
+    "main_horizon": 2000,
+    "stream_key_algorithm": "first 64 bits (16 lowercase hex) of SHA-256 over exact UTF-8 DT-P9-v1|DEV|<scenario>|r=<two-digit realisation>",
+    "immutable_source_rule": "Comparators consume the exact same two-tape DEV source identity used by F02/F05; no comparator-specific stream regeneration."
+  },
+  "comparators": {
+    "required_python": ["HAT", "ARF", "EFDT", "SRP", "FROZEN_CART", "ROLLING_CART"],
+    "conditional_external": ["PLASTIC"],
+    "literature_only": ["ILEAD", "CEVOT", "BTAD"],
+    "legacy_river_022": "prohibited as F07 benchmark"
+  },
+  "rolling_cart": {
+    "window_rows": 2000,
+    "refit_every_revealed_labels": 100,
+    "initial_fit": "last 2000 revealed rows available before the first scored post-prefix prediction",
+    "refit_timing": "after current prediction, label reveal and scoring; include the just-revealed row only after it has been scored",
+    "constructor": "same scikit-learn 1.9.0 DecisionTreeClassifier constructor as FROZEN_CART",
+    "selection_basis": "prospective structural alignment, not DEV score optimisation",
+    "justification": ["window equals the study initialisation size", "window equals the declared gradual-drift width", "refit cadence equals the internal learner selection/update interval"],
+    "hyperparameter_search": false,
+    "sensitivity_grid_in_primary": false
+  },
+  "seed_policy": {
+    "source_seed_schedule": "working/phase9/SEED_SCHEDULE.tsv",
+    "comparator_seed_schedule": "working/f07/COMPARATOR_SEED_FREEZE.json plus canonical regeneration by f07_dev_contract.py",
+    "algorithm": "first 32 bits (8 lowercase hex) of SHA-256 over exact UTF-8 DT-P9-v1|DEV|COMPARATOR|<method>|stream=<stream_key_hex>",
+    "range": "unsigned 32-bit",
+    "method_namespaces_isolated": true,
+    "efdt_seed": null,
+    "no_internal_state_seed_reuse": true,
+    "no_post_outcome_seed_changes": true
+  },
+  "f08_pilot": {
+    "purpose": "correctness, timing, source identity, runtime qualification and resource feasibility only",
+    "realisation": 0,
+    "scenario_ids": ["LOCAL_TREE-STATIONARY-NONE", "OBLIQUE-STATIONARY-NONE", "LOCAL_TREE-ABRUPT-SEVERE", "OBLIQUE-ABRUPT-SEVERE", "LOCAL_TREE-GRADUAL-MILD", "OBLIQUE-GRADUAL-MILD", "LOCAL_TREE-RECURRENT-SEVERE", "OBLIQUE-RECURRENT-SEVERE"],
+    "methods": ["HAT", "ARF", "EFDT", "SRP", "FROZEN_CART", "ROLLING_CART"],
+    "plastic": "add only after the separate official-runtime gate reports QUALIFIED",
+    "checkpoints": [10000, 20000],
+    "outcome_use": "no model or comparator tuning from observed predictive rankings",
+    "stop_rule": "complete all scheduled pilot cells unless infrastructure-invalid; no optional stopping on favourable scores"
+  },
+  "python_runtime": {
+    "python": "3.12.13",
+    "platform": "Linux x86_64 manylinux-compatible",
+    "river": "0.26.1",
+    "scikit_learn": "1.9.0",
+    "transitive_lock": "must be generated once in hosted clean-room acquisition, persisted with wheel SHA-256 values, then installed with --require-hashes semantics",
+    "network_during_scored_run": false
+  },
+  "plastic_runtime": {
+    "status": "CONDITIONALLY_ADMITTED_PENDING_BUILD_QUALIFICATION",
+    "preferred_implementation": "official CapyMOA-PLASTIC wrapper backed by the official pinned PLASTIC MOA JAR",
+    "java_repo_commit": "5a75f694a4ece8d6eb8714e8053726942130b10c",
+    "capymoa_repo_commit": "d6b9e3d2014adbce361ee7b1029bf92090ae81e2",
+    "wrapper_class": "capymoa.learner.classifier.PLASTIC",
+    "random_seed_support": true,
+    "required_order": ["predict", "reveal_label_and_score", "train"],
+    "qualification_required": ["build pinned MOA JAR from pinned source", "record JAR SHA-256 and Java/Maven versions", "show a row-level predict-then-train adapter over study source semantics", "verify deterministic replay under the same seed/source", "verify no future-label path", "verify resource supervisor compatibility"],
+    "prohibited": "no River approximation, no hand-reimplementation, no vendoring/relicensing of GPL source into the project"
+  },
+  "upstream_variant_decision": {
+    "PLASTIC": "candidate required if qualified",
+    "PLASTIC-A": "excluded from primary benchmark; background-learner wrapper changes the adaptation mechanism",
+    "EFHAT": "excluded from primary benchmark; retained as upstream ablation/context rather than an additional primary nearest-neighbour comparator",
+    "reason": "avoid redundant comparator proliferation and post-hoc multiplicity while retaining the closest published method."
+  },
+  "process_and_threads": {
+    "cell_isolation": "fresh OS process per method × source × scheduled method seed",
+    "parallel_scored_cells": 1,
+    "python_env": {"PYTHONHASHSEED": "0", "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "NUMEXPR_NUM_THREADS": "1", "VECLIB_MAXIMUM_THREADS": "1"},
+    "jvm": {"active_processor_count": 1, "heap_max_mib": 1536, "hard_process_rss_limit_mib": 2048, "timezone": "UTC", "encoding": "UTF-8", "gc": "SerialGC"},
+    "clock_policy": "CLOCK_MONOTONIC/perf_counter_ns for elapsed and process CPU clock for CPU; record host and kernel metadata",
+    "cache_policy": "no cross-method in-process model reuse; source bytes may remain in OS page cache and run order must be recorded rather than falsely claiming cold-cache equality"
+  },
+  "resource_measurement": {
+    "hard_rss_limit_mib": 2048,
+    "required": ["process_cpu_ns", "elapsed_ns", "peak_rss_bytes", "prediction_calls", "update_or_fit_calls", "labels_consumed", "algorithm_specific_size_or_member_count_when_available"],
+    "prediction_latency": {"measure_each_scored_prediction": true, "persist": ["count", "mean_ns", "p50_ns", "p95_ns", "p99_ns", "max_ns"], "do_not_persist_every_raw_latency_by_default": true},
+    "primary_resource_interpretation": "implementation-level realised cost under the declared host policy; not FLOP equivalence and not APW equivalence",
+    "internal_apw": "unchanged F02/F05 APW contract"
+  },
+  "failure_policy": {
+    "environment_or_version_mismatch": "ENVIRONMENT_INVALID; no scientific record and no fallback",
+    "source_integrity_failure": "INFRASTRUCTURE_INVALID; invalidate affected execution before scientific analysis",
+    "algorithm_failure_after_valid_start": "ALGORITHMIC_FAILURE; preserve failure point, score every remaining planned prediction slot as 0-1 loss=1, and retain a separate failure indicator/time-to-failure",
+    "rss_limit_exceeded_after_valid_start": "ALGORITHMIC_FAILURE_RESOURCE_LIMIT under the declared 2048 MiB cap; same post-failure loss=1 rule",
+    "timeout": "no scientific timeout chosen in F07; F08 may measure runtime but cannot invent a timeout after seeing method rankings",
+    "silent_retry": false,
+    "fallback_model": false,
+    "exclude_failed_cell_from_mean": false
+  },
+  "degrees_of_freedom_freeze": {
+    "rolling_cart_window_locked": true,
+    "rolling_cart_cadence_locked": true,
+    "seed_formula_locked": true,
+    "pilot_subset_locked": true,
+    "failure_scoring_locked": true,
+    "primary_comparator_hyperparameter_search": false,
+    "no_dev_winner_selection": true,
+    "confirmation_sample_size_changed": false
+  },
+  "next_phase_after_next": "F08_DEV_PILOT"
+}
