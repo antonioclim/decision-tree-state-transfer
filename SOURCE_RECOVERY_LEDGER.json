@@ -1,0 +1,109 @@
+{
+  "schema": "PUBLIC_SOURCE_RECOVERY_IDENTITIES_V1",
+  "files": [
+    {
+      "historical_relative_path": "scripts/audit-lib.mjs",
+      "bytes": 12392,
+      "sha256": "104d046110f06da486ba7564c5f5252abc3e34cf3136ed01b4b76576547c82d5",
+      "included_in_this_source_payload": true,
+      "qualified_historical_identity": {
+        "mode": "100644",
+        "git_blob": "0543e3ad8c38618aa6c4b9045c616ee699d54631",
+        "sha256": "104d046110f06da486ba7564c5f5252abc3e34cf3136ed01b4b76576547c82d5",
+        "bytes": 12392
+      },
+      "source_or_algorithm_newly_generated": false
+    },
+    {
+      "historical_relative_path": "working/f10/f10_tape.mjs",
+      "bytes": 4804,
+      "sha256": "0faef2b71a6c928efa34bf63d9e39cf0d2e01c056619b4b44a77643a55fab4b9",
+      "included_in_this_source_payload": true,
+      "qualified_historical_identity": {
+        "mode": "100644",
+        "git_blob": "2f523f38aba160f3c50e6229646600eaf270656f",
+        "sha256": "0faef2b71a6c928efa34bf63d9e39cf0d2e01c056619b4b44a77643a55fab4b9",
+        "bytes": 4804
+      },
+      "source_or_algorithm_newly_generated": false
+    },
+    {
+      "historical_relative_path": "working/phase10i/reference/trees-10h.mjs",
+      "bytes": 18333,
+      "sha256": "785a9f05ec3f4418f18c78ad5b4a3e7e7f2864e63849f53abb738abf6c36c674",
+      "included_in_this_source_payload": true,
+      "qualified_historical_identity": {
+        "mode": "100644",
+        "git_blob": "49b5db8cec384094c79f5305a3807ac0e329794f",
+        "sha256": "785a9f05ec3f4418f18c78ad5b4a3e7e7f2864e63849f53abb738abf6c36c674",
+        "bytes": 18333
+      },
+      "source_or_algorithm_newly_generated": false
+    },
+    {
+      "historical_relative_path": "working/i06/lock/I05_STUDY2_PROTOCOL_LOCK.json",
+      "bytes": 11803,
+      "sha256": "d8eaac46d96f0ffc986e3ac5937112910cb28010e6d2cdc42ab08255aa17a622",
+      "included_in_this_source_payload": false,
+      "qualified_historical_identity": {
+        "mode": "100644",
+        "git_blob": "b5fb9e1d31ff3798b90fbb1270aba21a1b1294bf",
+        "sha256": "d8eaac46d96f0ffc986e3ac5937112910cb28010e6d2cdc42ab08255aa17a622",
+        "bytes": 11803
+      },
+      "source_or_algorithm_newly_generated": false
+    },
+    {
+      "historical_relative_path": "working/i06/lock/I05_STUDY2_SEED_SCHEDULE.tsv",
+      "bytes": 198350,
+      "sha256": "9990ceb030a2e85690d5d6595f1f872965c20abfbeb4970f03fc706efc3b2652",
+      "included_in_this_source_payload": true,
+      "qualified_historical_identity": {
+        "mode": "100644",
+        "git_blob": "355aa9e3d30817f92642d157a7558d813208e129",
+        "sha256": "9990ceb030a2e85690d5d6595f1f872965c20abfbeb4970f03fc706efc3b2652",
+        "bytes": 198350
+      },
+      "source_or_algorithm_newly_generated": false
+    },
+    {
+      "historical_relative_path": "analysis/study1/execution/f10_primary_core.mjs",
+      "bytes": 17368,
+      "sha256": "6e8d42ff0df6d6da2df7acc431370d53e95ef348512a70197f36ab936cfba155",
+      "included_in_this_source_payload": true,
+      "qualified_historical_identity": null,
+      "source_or_algorithm_newly_generated": false
+    },
+    {
+      "historical_relative_path": "working/f10/f10_primary_core.mjs",
+      "bytes": 17350,
+      "sha256": "40f202ae1a5731b88adc596f9ea24e5246a1b55755ba70b87745688fce17bbd3",
+      "included_in_this_source_payload": true,
+      "qualified_historical_identity": {
+        "mode": "100644",
+        "git_blob": "cb8d3235539513fe9582c2d35c16585690246213",
+        "sha256": "40f202ae1a5731b88adc596f9ea24e5246a1b55755ba70b87745688fce17bbd3",
+        "bytes": 17350
+      },
+      "source_or_algorithm_newly_generated": false
+    },
+    {
+      "historical_relative_path": "working/i06/i06_primary_core.mjs",
+      "bytes": 11485,
+      "sha256": "8042362a42f67ec6326b2745dd6763451c82efd298286aabb64c52f69ca543f6",
+      "included_in_this_source_payload": true,
+      "qualified_historical_identity": {
+        "mode": "100644",
+        "git_blob": "c6ee1f1dffae69b8f388b84cd3b1f86ae629b900",
+        "sha256": "8042362a42f67ec6326b2745dd6763451c82efd298286aabb64c52f69ca543f6",
+        "bytes": 11485
+      },
+      "source_or_algorithm_newly_generated": false
+    }
+  ],
+  "qualified_historical_manifest_sha256": "0d95e624dd861c63e2a05d1ec02f35fc94301190288b022a6c9fcfc998616fb1",
+  "archival_recovery_carrier_sha256": "b872b90d595014002caf552f7f4295c0032a3c89e4e5597cef7d5872274784fa",
+  "six_F10_import_prefix_changes_only": true,
+  "full_private_recovery_proof_not_in_public_payload": true,
+  "historical_prospectivity_or_full_configuration_authenticated_by_this_record": false
+}

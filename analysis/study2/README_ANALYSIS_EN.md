@@ -1,3 +1,9 @@
+# Historical pre-EXT analysis snapshot
+
+The unchanged document below describes its earlier pre-outcome checkpoint, including then-zero executed realisations and its original command examples. It is preserved as historical scientific provenance, not as the current version 1.5.0 campaign state or an instruction/authorisation to qualify, run, resume or retry now. Current source and input boundaries are described in docs/REPRODUCIBILITY.md.
+
+---
+
 # I06B primary analysis and pre-outcome numerical qualification
 
 ## Status

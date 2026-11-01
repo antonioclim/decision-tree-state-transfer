@@ -13,7 +13,9 @@
         "package-lock.json",
         ".gitignore",
         ".gitattributes",
-        ".node-version"
+        ".node-version",
+        "working/**/*.mjs",
+        "scripts/**/*.mjs"
       ],
       "precedence": 50
     },
@@ -58,6 +60,16 @@
   ],
   "schema_version": 1,
   "selection_rule": "highest_precedence_number_wins",
-  "status": "ADOPTED_FOR_V1.0.0_PUBLIC_RELEASE",
-  "unmatched_path_policy": "verification_failure"
+  "status": "OWNER_CONFIRMED_ROUTING_RECORDED_FOR_1_5_0_LOCAL_COPY",
+  "unmatched_path_policy": "verification_failure",
+  "historical_reference_status": "ADOPTED_FOR_V1.0.0_PUBLIC_RELEASE",
+  "exact_file_proposal_map": "LICENCE_PROPOSALS.json",
+  "new_metadata_policy": "The owner-confirmed exact per-file map and related rights-state derivative metadata are recorded locally. Existing historical terms remain unchanged. Publication is not authorized.",
+  "proposal_state_before_confirmation": {
+    "status": "PROPOSED_ROUTING_FOR_1_5_0_OWNER_CONFIRMATION_PENDING",
+    "effective_new_grant": false
+  },
+  "rights_recorded": true,
+  "owner_confirmation_received": true,
+  "rights_record": "RIGHTS_STATUS.json"
 }

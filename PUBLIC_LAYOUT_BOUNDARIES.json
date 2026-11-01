@@ -1,0 +1,22 @@
+{
+  "schema": "PUBLIC_SOURCE_LAYOUT_AND_PROTOCOL_BOUNDARY_V1",
+  "exact_original_I05": {
+    "sha256": "d8eaac46d96f0ffc986e3ac5937112910cb28010e6d2cdc42ab08255aa17a622",
+    "bytes": 11803,
+    "public_payload_includes_exact_original": false
+  },
+  "public_protocol_derivative": {
+    "path": "protocols/study2/I05_STUDY2_PROTOCOL_LOCK.json",
+    "bytes": 12350,
+    "sha256": "e5f1a43d67120445b537bcdf81d4ea5eb55f098397a24c43440a52e4b8340548",
+    "metadata_paths_redacted": 12,
+    "remaining_protocol_values_unchanged": true,
+    "not_a_drop_in_original_lock": true
+  },
+  "known_original_only_consumer": "test/i06-preflight-guard.test.mjs",
+  "historical_original_binding_path": "working/i06/lock/I05_STUDY2_PROTOCOL_LOCK.json",
+  "native_original_lock_consumers_require_private_original_or_separately_qualified_binding": true,
+  "literal_JS_import_closure_does_not_establish_runtime_data_file_closure": true,
+  "retained_historical_public_validator": "validation/validate_public_candidate.py",
+  "historical_validator_not_advertised_as_1_5_0_validation_route": true
+}

@@ -1,14 +1,13 @@
-# Data availability and archival binding
+# Data availability and version boundaries
 
-The public GitHub repository contains publication-safe source, analysis-ready results and derived resource data at the exact tag `v1.0.0`:
+The historical companion is version 1.0.0 at https://github.com/antonioclim/decision-tree-state-transfer/releases/tag/v1.0.0 and https://doi.org/10.5281/zenodo.22852261. The existing Zenodo series is https://doi.org/10.5281/zenodo.22852260. Those historical identifiers do not identify the prepared version 1.5.0 files. Historical published files are not replaced or silently relabelled by this preparation.
 
-<https://github.com/antonioclim/decision-tree-state-transfer/releases/tag/v1.0.0>
+Version 1.5.0 is prepared as a source ZIP and a separately selected-evidence ZIP. The accompanying public release-file manifest identifies their exact names, byte counts and SHA-256 values. The selection is not the old extended raw Study 1/Study 2 archive and does not promise all historical raw records or a complete native reproduction route. A new exact-version DOI may be recorded only after an authorised publication in the existing series; none is invented here.
 
-The separate extended Zenodo archive contains:
+The source ZIP retains recovered primary-core/test source and the declared F10 path corrections. The original 11,803-byte I05 is held privately; protocols/study2/I05_STUDY2_PROTOCOL_LOCK.json is the distinct 12,350-byte metadata-redacted documentary derivative. Native consumers of the exact original or other historical sealed inputs retain those separate dependencies. Literal JavaScript-import closure and inherited syntax-only acceptance do not establish native execution or historical campaign qualification.
 
-1. the full Study 1 primary raw-record aggregate and contextual aggregate;
-2. all 1,120 Study 2 raw records and source manifests;
-3. official inferential outputs, locked protocols and closeout records;
-4. the exact source-only repository tree.
+The evidence ZIP distinguishes unchanged selected records, four frozen synthetic tapes and twelve labelled administrative-metadata projections. Original native provenance and scientific values remain distinct from those views. CT3 has an explicitly derived administrative adverse-outcome summary. The original MT1 STOP and later supplementary audit's legacy CPU-field exception are retained. The AB1 shared exploratory resource family does not resolve the three APW directions or establish simultaneous five- or six-coordinate dominance.
 
-The Zenodo DOI is inserted into the manuscript and this file after the authorised deposit is published. Until that DOI exists, the GitHub tag and the archive SHA-256 recorded in the release materials provide the exact binding.
+Saved AB1 coordinates for Supplementary Figures S7-S9 are evidence/AB1/WORKER/FIGURE_6_COORDINATES.csv, FIGURE_7_COORDINATES.csv and FIGURE_8_COORDINATES.csv in the evidence ZIP. Publisher-facing graphics, editable drawings and manuscripts are separate and outside the companion licence assignments. Raw private operational carriers, the exact original I05, private conversation/rights-confirmation records and audit ledgers are excluded; approved scientific receipts already listed in the evidence manifest remain included.
+
+Licences apply per file: PolyForm Noncommercial 1.0.0 for original software; CC BY-NC 4.0 for original documentation, protocols, metadata and selected evidence, with legal-text terms, exceptions and third-party notices preserved. Read LICENSE-POLICY.md and LICENCE_PROPOSALS.json. No blanket open-source, CC-BY or commercial grant is implied.

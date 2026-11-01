@@ -1,16 +1,5 @@
-# Rights confirmation
+# Recorded confirmation for the exact file set
 
-On 19 September 2026, Antonio Clim explicitly confirmed that he holds or has obtained the approval of all applicable rights holders to distribute the exact publication-safe scientific file set prepared in I15-A and to deposit the corresponding archival evidence package on Zenodo.
+The owner confirmed the necessary rights and approved the proposed per-file licence terms for the predecessor PUBLICATION_SCOPE_MANIFEST.json identified in RIGHTS_STATUS.json. That declaration is recorded locally; the verbatim conversation statement remains in private custody.
 
-The authorised creator order is:
-
-1. Andrei Toma — Bucharest University of Economic Studies
-2. Antonio Clim — Bucharest University of Economic Studies — ORCID 0000-0003-4745-0431
-
-The authorised file-level licensing route is:
-
-- original software, tests and validation utilities: PolyForm Noncommercial 1.0.0;
-- original protocols, documentation, manifests and generated scientific evidence: CC BY-NC 4.0;
-- third-party material: governed by its original terms and excluded unless specifically identified.
-
-This confirmation does not alter the scientific results, locked protocols or file-level licence map.
+LICENCE_PROPOSALS.json records the confirmed terms for each file. Existing historical terms, licence texts, exceptions and third-party notices remain unchanged. Changes from the approved predecessor are confined to this confirmation and related rights-state metadata and manifests. The confirmation does not authorize publication, upload, tag or DOI creation, executable-source changes, project execution, tests or scientific recalculation. Original approved archives remain unchanged.

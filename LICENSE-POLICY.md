@@ -1,23 +1,21 @@
-# File-level multi-licence policy
+# File-level licence policy for the unpublished 1.5.0 candidate
 
-This repository separates original software, scientific protocols, generated evidence and publication-facing material. A single blanket licence would be inaccurate.
+Existing historical file-specific terms remain applicable to their original material. The owner has confirmed the proposed per-file terms of the exact predecessor scope. LICENCE_PROPOSALS.json records those confirmed terms and the limited derivative rights-state metadata in this new local copy. Publication remains unauthorized.
 
 ## Original software
 
-Original source code, tests and validation utilities are distributed under **PolyForm Noncommercial 1.0.0**. This is source-available and noncommercial, not an OSI-approved open-source licence. Commercial use requires a separate written licence from all applicable rights holders.
+The historical software policy uses PolyForm Noncommercial 1.0.0. The same terms have been confirmed for the recovered or modified original software in the approved per-file map, including working and scripts modules. This is source-available material; no OSI-open-source status is asserted. Relevant existing notices and third-party terms remain unchanged.
 
-## Protocols, documentation and generated evidence
+## Documentation protocols and evidence
 
-Original public documentation, protocols, manifests and generated scientific data are distributed under **Creative Commons Attribution-NonCommercial 4.0 International**, except where a file-level rule states otherwise.
+The historical documentation policy uses Creative Commons Attribution-NonCommercial 4.0 International. These terms have been confirmed for the new original documentation, protocols, metadata and generated data views in the exact approved per-file map. Legal licence texts retain their respective document terms.
 
-## Manuscript and artwork
+## Manuscripts artwork and external material
 
-The Information Sciences manuscript, cover letter, title page, final publisher-facing figures and submission files are excluded from this repository and remain outside this licence map.
+Manuscripts, title pages, cover letters, publisher-facing figures and raw private operational archives are outside these public candidates. No third-party literature PDFs or separately licensed external datasets are included. External rights are not reassigned by this proposal.
 
-## Third-party material
+## Rights status
 
-No third-party datasets or literature PDFs are included. Upstream licences continue to govern any external material obtained separately.
+The recorded confirmation for the old 1.0.0 public release applies to that historical exact file set. It is not reused as approval of 1.5.0. The new local record is OWNER_CONFIRMED. RIGHTS_STATUS.json identifies the approved predecessor scope; LICENCE_PROPOSALS.json binds the recorded terms to current file hashes. licensing/licence-map.json records the confirmed routing and historical policy reference. The LICENSE and LICENSES texts are unchanged.
 
-## Rights basis
-
-The applicable rights-holder confirmation was supplied before public release. See `licensing/RIGHTS_CONFIRMATION.md` and `licensing/licence-map.json`.
+Owner confirmation of these proposals does not authorize an upload, release, tag, DOI creation, project execution, test or scientific recalculation. Publication requires separate approval of the final exact artifacts.

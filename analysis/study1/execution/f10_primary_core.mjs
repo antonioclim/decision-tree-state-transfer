@@ -1,10 +1,10 @@
 import { createHash } from 'node:crypto';
-import { EvolutionLearner } from '../../assets/code/confirmatory/learner.mjs';
-import { PrequentialSession } from '../../assets/code/confirmatory/session.mjs';
-import { forkF02State } from '../../assets/code/confirmatory/f02-state.mjs';
-import { frozenInterventionsV4, materialPredictionV4 } from '../../assets/code/confirmatory/material-v4.mjs';
-import { reachingRows } from '../../assets/code/confirmatory/material.mjs';
-import { getSubtree, nodeCount, predict, treeDepth, treeHash } from '../../assets/code/confirmatory/trees.mjs';
+import { EvolutionLearner } from '../../../assets/code/confirmatory/learner.mjs';
+import { PrequentialSession } from '../../../assets/code/confirmatory/session.mjs';
+import { forkF02State } from '../../../assets/code/confirmatory/f02-state.mjs';
+import { frozenInterventionsV4, materialPredictionV4 } from '../../../assets/code/confirmatory/material-v4.mjs';
+import { reachingRows } from '../../../assets/code/confirmatory/material.mjs';
+import { getSubtree, nodeCount, predict, treeDepth, treeHash } from '../../../assets/code/confirmatory/trees.mjs';
 
 const sha = (x) => createHash('sha256').update(typeof x === 'string' ? x : JSON.stringify(x)).digest('hex');
 

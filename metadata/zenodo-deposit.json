@@ -1,36 +1,92 @@
 {
-  "creators": [
-    {
-      "name": "Toma, Andrei",
-      "affiliation": "Bucharest University of Economic Studies"
+  "schema": "HUMAN_EDITABLE_ZENODO_METADATA_PROPOSAL_V2",
+  "proposal_only": true,
+  "not_an_API_request": true,
+  "preparation_snapshot": {
+    "record_scope": "Frozen local pre-publication preparation snapshot, not a live hosting-service state",
+    "recorded_UTC": "2026-11-01T16:45:58+00:00",
+    "publication_authorised_by_this_preparation": false,
+    "predecessor_rights_scope_sha256": "3230cadc5e0a7e46921f97be7c01d8b835dd14a7bb9d863b1630a70e09022cf8",
+    "local_operation": "Documentation and publication-metadata alignment only; executable sources, scientific data and confirmed terms unchanged."
+  },
+  "metadata": {
+    "title": "State-transfer interventions in adaptive decision-tree populations under concept drift: companion software and evidence",
+    "version": "1.5.0",
+    "creators_in_order": [
+      {
+        "order": 1,
+        "name_type": "Personal",
+        "given_name": "Andrei",
+        "family_name": "Toma",
+        "display_name": "Toma, Andrei",
+        "affiliation": "Bucharest University of Economic Studies"
+      },
+      {
+        "order": 2,
+        "name_type": "Personal",
+        "given_name": "Antonio",
+        "family_name": "Clim",
+        "display_name": "Clim, Antonio",
+        "affiliation": "Bucharest University of Economic Studies",
+        "orcid": "0000-0003-4745-0431"
+      }
+    ],
+    "resource_type_proposed": "Software",
+    "resource_type_basis": "Continuity with the existing companion software-and-evidence series; mixed data contents explained explicitly.",
+    "description_paragraphs_en_GB": [
+      "Version 1.5.0 of the companion software and selected evidence for studies of state-transfer interventions in adaptive decision-tree populations under concept drift. It distinguishes the unchanged historical version 1.0.0 record from subsequently recovered source files and separately scoped saved-evidence objects. It is a source-availability and evidence-curation update, not certification of complete historical campaign reproduction.",
+      "The source package includes recovered primary-core and test-module source files and declared F10 import-path corrections. The recorded static closure covers 221 literal relative JavaScript-import edges, and the same 79 JavaScript files retain their recorded syntax-only acceptance. These checks do not establish project import, test success or native runtime qualification. The exact original I05 protocol is held privately; the source package contains a distinct metadata-redacted derivative, which is not substituted at native original-lock bindings. Historical chronology and the complete authenticated configuration remain unqualified.",
+      "Selected evidence includes the separately identified AB1 implementation of existing-record resource reanalysis, the finite DEV qualification ledger including adverse outcomes, and the MT1 saved-result chain. AB1 is not a bitwise historical implementation reproduction or a new confirmatory predictive family: its saved shared 18-contrast family leaves the three APW directions unresolved and establishes no simultaneous five- or six-coordinate dominance. MT1 retains its original owner STOP with MT1_NATURAL_APW_REPORT. Its subsequent supplementary saved-data audit, including the legacy CPU-field schema exception, and prespecified descriptive extraction have separate scopes. Missing CPU fields have not been filled or interpreted as measured zero; no new independent replicate or native-owner PASS is asserted.",
+      "The evidence package distinguishes byte-exact existing records and four frozen synthetic tapes from twelve labelled metadata-reduced JSON views. The views preserve retained scientific values and source identities while omitting declared operational metadata; they do not replace original native closeouts or receipts. CT3 has only an explicitly derived administrative adverse-outcome summary. The saved AB1 coordinates underlying Supplementary Figures S7-S9 are retained as FIGURE_6_COORDINATES.csv, FIGURE_7_COORDINATES.csv and FIGURE_8_COORDINATES.csv. Manuscripts, publisher-facing figure graphics, editable drawings and raw private operational archives are excluded from these source-and-evidence packages.",
+      "Licences are assigned per file: original software uses PolyForm Noncommercial 1.0.0; original documentation, protocols, metadata and selected evidence use Creative Commons Attribution-NonCommercial 4.0 International, subject to preserved file-specific exceptions, legal-text terms and third-party notices. This is not a blanket CC-BY, MIT or OSI-open-source grant. Consult LICENSE-POLICY.md, LICENCE_PROPOSALS.json, licensing/licence-map.json where present, and the exact file manifests. The external release manifest and SHA256SUMS.txt identify the deposited archive bytes."
+    ],
+    "description_plain_text_en_GB": "Version 1.5.0 of the companion software and selected evidence for studies of state-transfer interventions in adaptive decision-tree populations under concept drift. It distinguishes the unchanged historical version 1.0.0 record from subsequently recovered source files and separately scoped saved-evidence objects. It is a source-availability and evidence-curation update, not certification of complete historical campaign reproduction.\n\nThe source package includes recovered primary-core and test-module source files and declared F10 import-path corrections. The recorded static closure covers 221 literal relative JavaScript-import edges, and the same 79 JavaScript files retain their recorded syntax-only acceptance. These checks do not establish project import, test success or native runtime qualification. The exact original I05 protocol is held privately; the source package contains a distinct metadata-redacted derivative, which is not substituted at native original-lock bindings. Historical chronology and the complete authenticated configuration remain unqualified.\n\nSelected evidence includes the separately identified AB1 implementation of existing-record resource reanalysis, the finite DEV qualification ledger including adverse outcomes, and the MT1 saved-result chain. AB1 is not a bitwise historical implementation reproduction or a new confirmatory predictive family: its saved shared 18-contrast family leaves the three APW directions unresolved and establishes no simultaneous five- or six-coordinate dominance. MT1 retains its original owner STOP with MT1_NATURAL_APW_REPORT. Its subsequent supplementary saved-data audit, including the legacy CPU-field schema exception, and prespecified descriptive extraction have separate scopes. Missing CPU fields have not been filled or interpreted as measured zero; no new independent replicate or native-owner PASS is asserted.\n\nThe evidence package distinguishes byte-exact existing records and four frozen synthetic tapes from twelve labelled metadata-reduced JSON views. The views preserve retained scientific values and source identities while omitting declared operational metadata; they do not replace original native closeouts or receipts. CT3 has only an explicitly derived administrative adverse-outcome summary. The saved AB1 coordinates underlying Supplementary Figures S7-S9 are retained as FIGURE_6_COORDINATES.csv, FIGURE_7_COORDINATES.csv and FIGURE_8_COORDINATES.csv. Manuscripts, publisher-facing figure graphics, editable drawings and raw private operational archives are excluded from these source-and-evidence packages.\n\nLicences are assigned per file: original software uses PolyForm Noncommercial 1.0.0; original documentation, protocols, metadata and selected evidence use Creative Commons Attribution-NonCommercial 4.0 International, subject to preserved file-specific exceptions, legal-text terms and third-party notices. This is not a blanket CC-BY, MIT or OSI-open-source grant. Consult LICENSE-POLICY.md, LICENCE_PROPOSALS.json, licensing/licence-map.json where present, and the exact file manifests. The external release manifest and SHA256SUMS.txt identify the deposited archive bytes.",
+    "publication_date": null,
+    "publication_date_rule": "Use the actual authorised public-release date, not the historical date 2026-09-19 or the local preparation date.",
+    "language": "English",
+    "keywords": [
+      "concept drift",
+      "data streams",
+      "decision trees",
+      "state transfer",
+      "reproducibility",
+      "resource trade-offs"
+    ],
+    "visibility_only_if_later_published": "Public",
+    "licences": [
+      {
+        "name": "PolyForm Noncommercial 1.0.0",
+        "identifier": "PolyForm-Noncommercial-1.0.0",
+        "canonical_url": "https://polyformproject.org/licenses/noncommercial/1.0.0/",
+        "applies_to": "Original software according to the exact per-file confirmed map; existing third-party/notice exceptions preserved."
+      },
+      {
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "identifier": "CC-BY-NC-4.0",
+        "canonical_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "applies_to": "Original documentation, protocols, metadata and selected evidence according to the exact per-file map; respective-document terms preserved."
+      }
+    ],
+    "licence_explanation_copy_en_GB": "File-level mixed noncommercial licences apply, not alternative blanket licences for every file. PolyForm Noncommercial 1.0.0 applies to the original software; CC BY-NC 4.0 applies to original documentation, protocols, metadata and selected evidence. Preserve respective-document terms and third-party notices. The exact per-file assignments and exceptions are in LICENCE_PROPOSALS.json and the accompanying licence-policy files. Manuscripts, publisher-facing figures and private operational archives are excluded.",
+    "custom_licence_fallback_if_required_by_UI": {
+      "title": "File-level mixed noncommercial licences",
+      "description": "File-level mixed noncommercial licences apply, not alternative blanket licences for every file. PolyForm Noncommercial 1.0.0 applies to the original software; CC BY-NC 4.0 applies to original documentation, protocols, metadata and selected evidence. Preserve respective-document terms and third-party notices. The exact per-file assignments and exceptions are in LICENCE_PROPOSALS.json and the accompanying licence-policy files. Manuscripts, publisher-facing figures and private operational archives are excluded.",
+      "URL_optional": null,
+      "do_not_fabricate_public_map_URL_before_release": true
     },
-    {
-      "name": "Clim, Antonio",
-      "affiliation": "Bucharest University of Economic Studies",
-      "orcid": "0000-0003-4745-0431"
-    }
-  ],
-  "title": "State-transfer interventions in adaptive decision-tree populations under concept drift: companion software and evidence",
-  "version": "1.0.0",
-  "access_right": "open",
-  "description": "Companion software, locked protocols, analysis-ready data and reproducibility evidence for two confirmatory studies of state-transfer interventions in adaptive decision-tree populations under concept drift. The deposit uses a file-level multi-licence: original software and validation code are distributed under PolyForm Noncommercial 1.0.0, while original protocols, documentation and generated evidence are distributed under CC BY-NC 4.0. See LICENSE-POLICY.md and licensing/licence-map.json in the archive.",
-  "keywords": [
-    "concept drift",
-    "data streams",
-    "decision trees",
-    "state transfer",
-    "reproducibility",
-    "resource trade-offs"
-  ],
-  "publication_date": "2026-09-19",
-  "upload_type": "software",
-  "language": "eng",
-  "related_identifiers": [
-    {
-      "identifier": "https://github.com/antonioclim/decision-tree-state-transfer/releases/tag/v1.0.0",
-      "relation": "isSupplementTo",
-      "resource_type": "software"
-    }
-  ],
-  "notes": "File-level licences govern the contents. No single blanket licence applies to the complete archive."
+    "no_blanket_CC_BY_MIT_OR_OSI_open_source_claim": true,
+    "machine_JSON_import_or_API_compatibility_promised": false,
+    "not_a_Zenodo_API_payload": true
+  },
+  "existing_series": {
+    "record": 22852261,
+    "concept_DOI": "10.5281/zenodo.22852260",
+    "historical_version_DOI": "10.5281/zenodo.22852261"
+  },
+  "new_DOI": null,
+  "publication_date": null,
+  "publication_authorised": false,
+  "planned_GitHub_release_link_not_created_by_this_preparation": "https://github.com/antonioclim/decision-tree-state-transfer/releases/tag/v1.5.0",
+  "files_rule": "The four files identified by the external PUBLIC_RELEASE_FILES_MANIFEST.json; not a full raw archive.",
+  "activate_related_release_link_only_after_actual_creation_and_verification": true
 }

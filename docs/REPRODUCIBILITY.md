@@ -1,33 +1,21 @@
-# Reproducibility guide
+# Source inspection and reproducibility limits
 
-## Static source-only verification
+This is the version 1.5.0 documentary source/evidence update. It is not a certified end-to-end execution environment. No project import, test, model, resampling, prediction, RNG, MT1 or native campaign execution was performed while preparing this copy. The byte-identical 79 JavaScript files retain the earlier recorded syntax-only acceptance; that result is not a runtime or campaign qualification.
 
-Run:
+## Historical validators and fixed-tape arithmetic
 
-```bash
-python3 -B validation/validate_public_candidate.py
-```
+validation/validate_public_candidate.py is retained unchanged as a historical version 1.0.0 source artefact. Its assumptions include historical metadata and a layout that forbids working/. It is not advertised as a version 1.5.0 qualification command. No replacement project checker has been introduced or executed.
 
-## Study 2 numerical reproduction
+validation/reproduce_study2_public.py performs historical arithmetic from REPRODUCTION_INPUT.json and fixed draw tapes. The retained historical record reports comparisons of the inferential object; this preparation does not repeat them. That route does not regenerate original predictions, repeat raw admission or qualify the full historical campaign. Its APW-dependent historical outputs remain subject to the accounting qualifications in the manuscript and Supplementary Information.
 
-Run:
+## Original inputs and preserved scientific snapshots
 
-```bash
-python3 -B validation/reproduce_study2_public.py
-```
+The recovered exact original I05 and the 12,350-byte public documentary derivative have different hashes. The original is private and is not substituted at its native working-path. Consumers requiring it or historical sealed inputs retain those data-file dependencies even though the 221 literal relative JavaScript-import edges have targets. Historical analysis READMEs, command examples, protocols and environment versions are preserved as scoped records; they are not current run instructions or an authorisation to retry consumed attempts.
 
-This computes the complete J₁–J₂ inferential object from `REPRODUCTION_INPUT.json` and the two fixed draw tapes. The gate requires exact JSON equality with the sealed independent Node reproduction, covering 60,020 numerical values and the discrete inferential fields. It does not generate streams, admit units or rerun the learner.
+## Selected evidence
 
-The publication-safe protocol lock is a transparent derivative of the immutable lock: environment-specific acquisition paths were replaced by source-object labels, every scientific field and input hash was retained and the derivative records the original protocol SHA-256.
+The separate evidence ZIP retains approved byte-exact records and explicitly labelled metadata-reduced JSON views. It is not the full raw operational archive and its views are not replacement native closeouts or receipts. CT3 is a derived administrative summary only. MT1's original owner STOP, the later supplementary saved-data audit with its legacy CPU schema exception, and its descriptive extraction remain separate. Missing CPU values remain absent, not zero. AB1 uses its saved shared exploratory resource family; no new predictive inference or resource dominance is established here.
 
-## Study 1
+## Local administrative verification
 
-The repository retains the official F11 and F12 analysis implementations and their locked outputs. The separate archival candidate contains the 4,480-record primary aggregate, contextual aggregate and official F11/F12 result bundles.
-
-## Decision economics
-
-The complete 3,360-row stream–arm panel and I07 reproduction code are under `data/decision_economics/` and `analysis/decision_economics/`.
-
-## Deliberate boundary
-
-The public candidate does not include campaign launchers, cloud recovery code, consumed execution authorities, VM evidence or private handovers. It does not regenerate publisher-formatted Office documents.
+The exact-file manifests and SHA256SUMS.txt bind the prepared bytes. Code, scientific inputs, numeric outputs, frozen tapes, native statuses, source identities and licence texts are preserved from the confirmed predecessor. Documentation and publication metadata have been aligned separately. These identity checks do not qualify importability, tests, portability, effective historical settings, trusted chronology or complete native execution. Project execution would require a separately scoped authorisation and appropriate scientific admission; no such action is provided by this guide.

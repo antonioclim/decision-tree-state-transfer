@@ -1,0 +1,61 @@
+{
+  "schema": "LOCAL_OWNER_CONFIRMED_LICENCE_STATUS_V1",
+  "planned_version": "1.5.0",
+  "status": "OWNER_CONFIRMED_RIGHTS_RECORDED_LOCAL_PUBLICATION_NOT_AUTHORIZED",
+  "owner_confirmation_received": true,
+  "rights_recorded": true,
+  "approved_predecessor_scope": {
+    "name": "PUBLICATION_SCOPE_MANIFEST.json",
+    "bytes": 2016,
+    "sha256": "94cc0f37f2c053e7bab91acf438d209f3d62260a53bfec8b2493f1c7a1f7e62b"
+  },
+  "approved_predecessor_archives": {
+    "SOURCE": {
+      "name": "ANDREI_1_5_0_SOURCE_PUBLIC_CANDIDATE_R1.zip",
+      "bytes": 19884824,
+      "sha256": "a6e894ca0619c57f0656fd79b36f7520003e9aa410abc971471b77c758109aa3",
+      "archive_member_count": 246
+    },
+    "EVIDENCE": {
+      "name": "ANDREI_1_5_0_EVIDENCE_PUBLIC_CANDIDATE_R1.zip",
+      "bytes": 10121517,
+      "sha256": "6db8a7a05518e70e302798bd2a18092ab7469aa710e27b1671870efb90e57a38",
+      "archive_member_count": 196
+    }
+  },
+  "approved_predecessor_licence_maps": {
+    "SOURCE": {
+      "archive_member": "LICENCE_PROPOSALS.json",
+      "bytes": 139137,
+      "sha256": "f718ee1dda4c0d15f7e74cd4ae0c5b401071813e0548bcf4476f156158555f09"
+    },
+    "EVIDENCE": {
+      "archive_member": "LICENCE_PROPOSALS.json",
+      "bytes": 107108,
+      "sha256": "a22e537e4d9a29e6f08c5a41a55751b34a2eaf276ded52beec0d27459a0faa1f"
+    }
+  },
+  "terms_confirmed_by_owner": {
+    "original_software": "PolyForm-Noncommercial-1.0.0",
+    "original_documentation_protocols_data": "CC-BY-NC-4.0",
+    "licence_texts": "respective-document-terms"
+  },
+  "historical_terms_exceptions_and_third_party_notices_preserved": true,
+  "authorized_local_changes": "Record the confirmation and related rights-state metadata in new copies only.",
+  "publication_authorised": false,
+  "published": false,
+  "tag_created_by_this_operation": false,
+  "DOI_created_by_this_operation": false,
+  "project_execution_tests_or_recalculation_authorised": false,
+  "raw_user_statement_and_private_receipt_not_in_public_payload": true,
+  "record_type": "Owner declaration recorded from the local conversation; not an independent legal, identity, native-runtime or scientific certification.",
+  "frozen_pre_confirmation_evidence_rights_fields": "The unchanged CT3 summary and binary-format proof retain their creation-time rights snapshots; this record and the current exact per-file licence map state the subsequently confirmed terms.",
+  "related_rights_record_metadata_terms": "CC-BY-NC-4.0, recorded under the confirmed policy for the authorized metadata derivative.",
+  "preparation_snapshot_context": {
+    "record_scope": "Frozen local pre-publication preparation snapshot, not a live hosting-service state",
+    "recorded_UTC": "2026-11-01T16:45:58+00:00",
+    "publication_authorised_by_this_preparation": false,
+    "predecessor_rights_scope_sha256": "3230cadc5e0a7e46921f97be7c01d8b835dd14a7bb9d863b1630a70e09022cf8",
+    "local_operation": "Documentation and publication-metadata alignment only; executable sources, scientific data and confirmed terms unchanged."
+  }
+}

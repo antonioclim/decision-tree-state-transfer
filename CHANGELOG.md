@@ -1,9 +1,8 @@
-# Changelog
+# Version1.5.0 unpublished documentary candidate
 
-## 1.0.0 — 2026-09-19
-
-- Published a clean, publication-safe companion repository distinct from the private operational history.
-- Curated qualified scientific source from tree `686856fd45e19795cbe21e980566965247d3b1c3`.
-- Added locked Study 1 and Study 2 protocols, official analyses and decision-economics outputs.
-- Added final creator metadata, file-level licensing, privacy checks, integrity validation and citation metadata.
-- Excluded historical cloud orchestration, private handovers, literature PDFs and submission-facing documents.
+- Retains byte-verified source recovery and the six bounded F10 path corrections.
+- Keeps the exact original I05 private; preserves the existing metadata-redacted public derivative without substituting it for the original.
+- Omits historical approval snapshots and the private administrative verifier from the public source payload.
+- Carries syntax coverage by exact identity of all 79 JavaScript files; no executable source changes or new execution.
+- Documents original-only data dependencies and the limits of native/campaign reproduction.
+- Records the owner-confirmed per-file licence terms in new local rights-state metadata. Publication authorization remains separate. No release or new DOI has been created.

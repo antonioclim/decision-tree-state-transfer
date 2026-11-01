@@ -1,0 +1,25 @@
+{
+  "schema": "FILTERED_PUBLICATION_CANDIDATE_GATE_V1",
+  "version": "1.5.0",
+  "intended_tag": "v1.5.0",
+  "status": "OWNER_CONFIRMED_RIGHTS_RECORDED_LOCAL_PUBLICATION_NOT_AUTHORIZED",
+  "authorised_for_public_release": false,
+  "rights_confirmation": true,
+  "published": false,
+  "new_DOI": null,
+  "historical_public_version": "1.0.0",
+  "historical_version_DOI": "10.5281/zenodo.22852261",
+  "syntax_accepted_for_identical_79_JS_sources": true,
+  "functional_runtime_or_full_campaign_qualified": false,
+  "original_private_I05_excluded": true,
+  "historical_private_repository_must_remain_unchanged": true,
+  "rights_record": "RIGHTS_STATUS.json",
+  "recording_scope": "Owner declaration and related rights-state metadata only; not a publication or scientific approval.",
+  "preparation_snapshot_context": {
+    "record_scope": "Frozen local pre-publication preparation snapshot, not a live hosting-service state",
+    "recorded_UTC": "2026-11-01T16:45:58+00:00",
+    "publication_authorised_by_this_preparation": false,
+    "predecessor_rights_scope_sha256": "3230cadc5e0a7e46921f97be7c01d8b835dd14a7bb9d863b1630a70e09022cf8",
+    "local_operation": "Documentation and publication-metadata alignment only; executable sources, scientific data and confirmed terms unchanged."
+  }
+}
